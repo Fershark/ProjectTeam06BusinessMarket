@@ -67,12 +67,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Businesses.AddRange(businesses);
             context.SaveChanges();
 
-            List<Product> products = new List<Product>()
+            /*List<Product> products = new List<Product>()
             {
                 new Product {Name = "Continuous Sushi Roll Machine", Description = "Creates delicious Norimaki with a fluffly rice sheet", QuantityInStock = 10, Price = (decimal) 1001, Category = categories[0], Business = businesses[1] }
             };
             context.Products.AddRange(products);
-            context.SaveChanges();
+            context.SaveChanges();*/
 
             /*List<Order> orders = new List<Order>()
             {
