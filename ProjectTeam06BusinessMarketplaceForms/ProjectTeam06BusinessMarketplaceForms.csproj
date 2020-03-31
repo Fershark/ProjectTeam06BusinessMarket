@@ -58,17 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddOrUpdateCategoriesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddOrUpdateCategoriesForm.Designer.cs">
-      <DependentUpon>AddOrUpdateCategoriesForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddOrUpdateBusinessProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddOrUpdateBusinessProductForm.Designer.cs">
       <DependentUpon>AddOrUpdateBusinessProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrUpdateCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrUpdateCategoriesForm.Designer.cs">
+      <DependentUpon>AddOrUpdateCategoriesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectTeam06BusinessMarketplaceForm.cs">
       <SubType>Form</SubType>
