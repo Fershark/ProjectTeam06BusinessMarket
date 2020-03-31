@@ -58,11 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectTeam06BusinessMarketplace1.cs">
+    <Compile Include="AddOrUpdateBusinessProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjectTeam06BusinessMarketplace1.Designer.cs">
-      <DependentUpon>ProjectTeam06BusinessMarketplace1.cs</DependentUpon>
+    <Compile Include="AddOrUpdateBusinessProductForm.Designer.cs">
+      <DependentUpon>AddOrUpdateBusinessProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrUpdateCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrUpdateCategoriesForm.Designer.cs">
+      <DependentUpon>AddOrUpdateCategoriesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectTeam06BusinessMarketplaceForm.cs">
       <SubType>Form</SubType>
@@ -72,8 +78,14 @@
     </Compile>
     <Compile Include="ProjectTeam06BusinessMarketplace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ProjectTeam06BusinessMarketplace1.resx">
-      <DependentUpon>ProjectTeam06BusinessMarketplace1.cs</DependentUpon>
+    <EmbeddedResource Include="AddOrUpdateBusinessProductForm.resx">
+      <DependentUpon>AddOrUpdateBusinessProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrUpdateCategoriesForm.resx">
+      <DependentUpon>AddOrUpdateCategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectTeam06BusinessMarketplaceForm.resx">
+      <DependentUpon>ProjectTeam06BusinessMarketplaceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
