@@ -82,13 +82,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Orders.AddRange(orders);
             context.SaveChanges();
             
-           /* List<Order> orders = new List<Order>()
-            {
-                new Order {OrderDate = DateTime.Now, TotalPrice = 2002, Business = businesses[2]}
-            };
-            orders[0].Products.Add(products[0]);
-            context.Orders.AddRange(orders);
-            context.SaveChanges();*/
              
         }
     }
