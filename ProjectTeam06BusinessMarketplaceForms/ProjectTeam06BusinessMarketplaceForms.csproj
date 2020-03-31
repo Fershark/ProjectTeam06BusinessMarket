@@ -111,9 +111,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessMarketplaceEntities\BusinessMarketplaceEntities.csproj">
+    <ProjectReference Include="..\BusinessMarketplaceEntities\BusinessMarketplaceEntitiesNS.csproj">
       <Project>{6906bc32-9887-45db-9e22-b1309e6f6920}</Project>
-      <Name>BusinessMarketplaceEntities</Name>
+      <Name>BusinessMarketplaceEntitiesNS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

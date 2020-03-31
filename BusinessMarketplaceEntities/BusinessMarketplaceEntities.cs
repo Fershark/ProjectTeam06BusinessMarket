@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessMarketplaceEntities
+namespace BusinessMarketplaceEntitiesNS
 {
-    public class BusinessMarketplaceEntities: DbContext
+    public class BusinessMarketplaceEntitiesContext: DbContext
     {
 
-        public BusinessMarketplaceEntities(): base("name=BusinessMarketplaceConnection")
+        public BusinessMarketplaceEntitiesContext(): base("name=BusinessMarketplaceConnection")
         {
         }
 

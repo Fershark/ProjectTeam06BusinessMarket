@@ -9,28 +9,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessMarketplaceEntities;
+using BusinessMarketplaceEntitiesNS;
 
 namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class ProjectTeam06BusinessMarketplaceForm : Form
     {
-        private BusinessMarketplaceEntities.BusinessMarketplaceEntities context;
+        private BusinessMarketplaceEntitiesContext context;
 
         public ProjectTeam06BusinessMarketplaceForm()
         {
             InitializeComponent();
 
-            context = new BusinessMarketplaceEntities.BusinessMarketplaceEntities();
+            context = new BusinessMarketplaceEntitiesContext();
 
             this.Load += ProjectTeam06BusinessMarketplaceForm_Load;
 
             this.FormClosed += (s, e) => context.Dispose();
+
+            buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
+        }
+
+        private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
+        {
+            AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm();
+            addOrUpdateDepartmentForm.ShowDialog();
+            
         }
 
         private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
         {
             SeedBusinessMarketplaceDataTables();
+
+            InitalizeDataGridView<Business>(dataGridViewBussiness, context.Businesses.Local.ToBindingList(), "Orders", "Products");
+            InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
         }
 
         private void SeedBusinessMarketplaceDataTables() 
@@ -82,7 +94,31 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Orders.AddRange(orders);
             context.SaveChanges();
             
+           /* List<Order> orders = new List<Order>()
+            {
+                new Order {OrderDate = DateTime.Now, TotalPrice = 2002, Business = businesses[2]}
+            };
+            orders[0].Products.Add(products[0]);
+            context.Orders.AddRange(orders);
+            context.SaveChanges();*/
              
+        }
+        
+        private void InitalizeDataGridView<T>(DataGridView dataGridView,BindingList<T> bindingList,params string[] columnsToIgnore)
+        {
+            dataGridView.DataSource = bindingList;
+            dataGridView.ReadOnly = true;
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            // autosize the row heights, but only those displayed to improve performance
+            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
+            foreach (var columnToIgnore in columnsToIgnore)
+            {
+                dataGridView.Columns[columnToIgnore].Visible = false;
+            }
         }
     }
 }

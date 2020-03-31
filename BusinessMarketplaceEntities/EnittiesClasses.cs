@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessMarketplaceEntities
+namespace BusinessMarketplaceEntitiesNS
 {
     [Table("Businesses")]
     public partial class Business
@@ -45,7 +45,6 @@ namespace BusinessMarketplaceEntities
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
-
     }
 
     [Table("Products")]
@@ -118,6 +117,11 @@ namespace BusinessMarketplaceEntities
         public string Description { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
+
+        public override string ToString()
+        {
+            return Id + ": " + Name;
+        }
     }
 
     [Table("Orders")]

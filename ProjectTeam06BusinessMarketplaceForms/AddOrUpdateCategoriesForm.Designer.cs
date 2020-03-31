@@ -31,10 +31,10 @@
             this.listBoxCategories = new System.Windows.Forms.ListBox();
             this.labelCategoriesName = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.buttonAddCategories = new System.Windows.Forms.Button();
-            this.buttonUpdateCategories = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxCategories
@@ -51,9 +51,9 @@
             this.labelCategoriesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoriesName.Location = new System.Drawing.Point(35, 207);
             this.labelCategoriesName.Name = "labelCategoriesName";
-            this.labelCategoriesName.Size = new System.Drawing.Size(147, 20);
+            this.labelCategoriesName.Size = new System.Drawing.Size(132, 20);
             this.labelCategoriesName.TabIndex = 1;
-            this.labelCategoriesName.Text = "Categories Name";
+            this.labelCategoriesName.Text = "Category Name";
             // 
             // labelDescription
             // 
@@ -65,51 +65,51 @@
             this.labelDescription.TabIndex = 2;
             this.labelDescription.Text = "Description";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 234);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 44);
-            this.textBox1.TabIndex = 3;
+            this.textBoxName.Location = new System.Drawing.Point(38, 234);
+            this.textBoxName.Multiline = true;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(191, 44);
+            this.textBoxName.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(35, 357);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 44);
-            this.textBox2.TabIndex = 4;
+            this.textBoxDescription.Location = new System.Drawing.Point(35, 357);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(194, 44);
+            this.textBoxDescription.TabIndex = 4;
             // 
             // buttonAddCategories
             // 
             this.buttonAddCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddCategories.Location = new System.Drawing.Point(38, 441);
+            this.buttonAddCategories.Location = new System.Drawing.Point(98, 139);
             this.buttonAddCategories.Name = "buttonAddCategories";
             this.buttonAddCategories.Size = new System.Drawing.Size(75, 35);
             this.buttonAddCategories.TabIndex = 5;
             this.buttonAddCategories.Text = "Add";
             this.buttonAddCategories.UseVisualStyleBackColor = true;
             // 
-            // buttonUpdateCategories
+            // buttonSubmit
             // 
-            this.buttonUpdateCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateCategories.Location = new System.Drawing.Point(154, 441);
-            this.buttonUpdateCategories.Name = "buttonUpdateCategories";
-            this.buttonUpdateCategories.Size = new System.Drawing.Size(75, 35);
-            this.buttonUpdateCategories.TabIndex = 6;
-            this.buttonUpdateCategories.Text = "Update";
-            this.buttonUpdateCategories.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Location = new System.Drawing.Point(98, 425);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(75, 35);
+            this.buttonSubmit.TabIndex = 6;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
             // 
             // AddOrUpdateCategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 531);
-            this.Controls.Add(this.buttonUpdateCategories);
+            this.ClientSize = new System.Drawing.Size(280, 502);
+            this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonAddCategories);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDescription);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelCategoriesName);
             this.Controls.Add(this.listBoxCategories);
@@ -125,9 +125,9 @@
         private System.Windows.Forms.ListBox listBoxCategories;
         private System.Windows.Forms.Label labelCategoriesName;
         private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Button buttonAddCategories;
-        private System.Windows.Forms.Button buttonUpdateCategories;
+        private System.Windows.Forms.Button buttonSubmit;
     }
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTeam06BusinessMarketplaceForms", "ProjectTeam06BusinessMarketplaceForms\ProjectTeam06BusinessMarketplaceForms.csproj", "{5DD84B15-D170-4364-8D32-7275F72A8565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessMarketplaceEntities", "BusinessMarketplaceEntities\BusinessMarketplaceEntities.csproj", "{6906BC32-9887-45DB-9E22-B1309E6F6920}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessMarketplaceEntitiesNS", "BusinessMarketplaceEntities\BusinessMarketplaceEntitiesNS.csproj", "{6906BC32-9887-45DB-9E22-B1309E6F6920}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
