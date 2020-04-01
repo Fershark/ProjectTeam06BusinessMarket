@@ -35,6 +35,8 @@
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.buttonAddCategories = new System.Windows.Forms.Button();
             this.buttonSubmit = new System.Windows.Forms.Button();
+            this.labelIdDescription = new System.Windows.Forms.Label();
+            this.labelId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxCategories
@@ -49,7 +51,7 @@
             // 
             this.labelCategoriesName.AutoSize = true;
             this.labelCategoriesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCategoriesName.Location = new System.Drawing.Point(35, 207);
+            this.labelCategoriesName.Location = new System.Drawing.Point(31, 246);
             this.labelCategoriesName.Name = "labelCategoriesName";
             this.labelCategoriesName.Size = new System.Drawing.Size(132, 20);
             this.labelCategoriesName.TabIndex = 1;
@@ -59,7 +61,7 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(35, 328);
+            this.labelDescription.Location = new System.Drawing.Point(31, 334);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(100, 20);
             this.labelDescription.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(38, 234);
+            this.textBoxName.Location = new System.Drawing.Point(35, 269);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(191, 44);
@@ -101,11 +103,34 @@
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = true;
             // 
+            // labelIdDescription
+            // 
+            this.labelIdDescription.AutoSize = true;
+            this.labelIdDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdDescription.Location = new System.Drawing.Point(31, 214);
+            this.labelIdDescription.Name = "labelIdDescription";
+            this.labelIdDescription.Size = new System.Drawing.Size(28, 20);
+            this.labelIdDescription.TabIndex = 7;
+            this.labelIdDescription.Text = "ID";
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelId.Location = new System.Drawing.Point(62, 214);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(14, 20);
+            this.labelId.TabIndex = 8;
+            this.labelId.Text = " ";
+            // 
             // AddOrUpdateCategoriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(280, 502);
+            this.Controls.Add(this.labelId);
+            this.Controls.Add(this.labelIdDescription);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonAddCategories);
             this.Controls.Add(this.textBoxDescription);
@@ -129,5 +154,7 @@
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Button buttonAddCategories;
         private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Label labelIdDescription;
+        private System.Windows.Forms.Label labelId;
     }
 }

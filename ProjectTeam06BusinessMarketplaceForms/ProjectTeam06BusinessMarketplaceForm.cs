@@ -34,7 +34,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
             AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm();
             addOrUpdateDepartmentForm.ShowDialog();
-            
+            context.Categories.Load();
+            dataGridViewCategories.Refresh();
         }
 
         private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
