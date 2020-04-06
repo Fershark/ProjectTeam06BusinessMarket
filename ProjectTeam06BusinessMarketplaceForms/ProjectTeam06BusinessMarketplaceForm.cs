@@ -53,8 +53,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             InitalizeDataGridView<Business>(dataGridViewBussiness, context.Businesses.Local.ToBindingList(), "Orders", "Products");
             InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
-            InitalizeDataGridView<Product>(dataGridViewBusinessProduct, context.Products.Local.ToBindingList(), "Products");
-            InitalizeDataGridView<Order>(dataGridViewOrder, context.Orders.Local.ToBindingList(), "Orders");
+            InitalizeDataGridView<Product>(dataGridViewBusinessProduct, context.Products.Local.ToBindingList());
+            InitalizeDataGridView<Order>(dataGridViewOrder, context.Orders.Local.ToBindingList());
         }
 
         private void SeedBusinessMarketplaceDataTables() 

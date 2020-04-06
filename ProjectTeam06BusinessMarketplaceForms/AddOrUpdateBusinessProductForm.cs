@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -69,7 +71,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Businesses.Load();
 
             listBoxProduct.DataSource = null;
-            listBoxProduct = context.Businesses.Local.ToBindingList();
+            listBoxProduct.DataSource = context.Businesses.Local.ToBindingList();
         }
 
 
@@ -77,8 +79,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
             textBoxProductName.Text = product.Name;
             textBoxProductDescription.Text = product.Description;
-            textBoxQuantityInStock.Text = product.QuantityInstock;
-            textBoxProductPrice.Text = product.Price;
+            textBoxQuantityInStock.Text = product.QuantityInStock.ToString();
+            textBoxProductPrice.Text = product.Price.ToString();
             
         }
 
@@ -124,9 +126,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 //if id is 0 it means we need to add id 
                 if(product.Id == 0)
                 {
-                    context.Businesses.Add(product);
+                    context.Products.Add(product);
                     ReloadListBoxData();
-                    listBoxProduct.SelectedIndex = context.Business.Count() - 1;
+                    listBoxProduct.SelectedIndex = context.Businesses.Count() - 1;
                     message = "Product added successfully.";
                 }
                 else
