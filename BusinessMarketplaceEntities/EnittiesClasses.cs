@@ -91,6 +91,11 @@ namespace BusinessMarketplaceEntitiesNS
         public virtual Category Category { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
+
+        public override string ToString()
+        {
+            return Id + ": " + Name;
+        }
     }
 
     [Table("Categories")]
