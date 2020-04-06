@@ -55,8 +55,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
            
             CleanForm();
-
-            
+         
            
         }
         private void AddOrUpdateBusinessProductForm_Load(object sender, EventArgs e)
@@ -74,23 +73,24 @@ namespace ProjectTeam06BusinessMarketplaceForms
             listBoxProduct.DataSource = context.Businesses.Local.ToBindingList();
         }
 
-
-        private void MapProductToForm()
-        {
-            textBoxProductName.Text = product.Name;
-            textBoxProductDescription.Text = product.Description;
-            textBoxQuantityInStock.Text = product.QuantityInStock.ToString();
-            textBoxProductPrice.Text = product.Price.ToString();
-            
-        }
-
         private void CleanForm()
         {
             listBoxProduct.SelectedIndex = -1;
             product = new Product();
             MapProductToForm();
         }
+        private void MapProductToForm()
+        {
+            labelProductIdNumber.Text = product.Id.ToString();
+            textBoxProductName.Text = product.Name == null ? "" : product.Name;
+            textBoxProductDescription.Text = product.Description == null ? "" : product.Description;
+            textBoxQuantityInStock.Text = product.QuantityInStock.ToString();
+            textBoxProductPrice.Text = product.Price.ToString();
+            labelBusinessIdNumber.Text = product.BusinessId.ToString();
+            labelCategoriesIdNumber.Text = product.CategoryId.ToString();
+        }
 
+  
         private void ButtonUpdateProduct_Click(object sender, EventArgs e)
         {
             string name = textBoxProductName.Text;
