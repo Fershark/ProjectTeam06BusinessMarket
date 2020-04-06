@@ -28,6 +28,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             this.FormClosed += (s, e) => context.Dispose();
 
             buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
+            buttonAddUpdateProduct.Click += ButtonAddUpdateProduct_Click;
         }
 
         private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
@@ -38,12 +39,22 @@ namespace ProjectTeam06BusinessMarketplaceForms
             dataGridViewCategories.Refresh();
         }
 
+        private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
+        {
+            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm();
+            addOrUpdateBusinessProductForm.ShowDialog();
+            context.Businesses.Load();
+            dataGridViewBusinessProduct.Refresh();
+        }
+
         private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
         {
             SeedBusinessMarketplaceDataTables();
 
             InitalizeDataGridView<Business>(dataGridViewBussiness, context.Businesses.Local.ToBindingList(), "Orders", "Products");
             InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
+            InitalizeDataGridView<Product>(dataGridViewBusinessProduct, context.Products.Local.ToBindingList(), "Products");
+            InitalizeDataGridView<Order>(dataGridViewOrder, context.Orders.Local.ToBindingList(), "Orders");
         }
 
         private void SeedBusinessMarketplaceDataTables() 
@@ -95,13 +106,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Orders.AddRange(orders);
             context.SaveChanges();
             
-           /* List<Order> orders = new List<Order>()
-            {
-                new Order {OrderDate = DateTime.Now, TotalPrice = 2002, Business = businesses[2]}
-            };
-            orders[0].Products.Add(products[0]);
-            context.Orders.AddRange(orders);
-            context.SaveChanges();*/
              
         }
         
@@ -121,5 +125,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 dataGridView.Columns[columnToIgnore].Visible = false;
             }
         }
+
+       
     }
 }

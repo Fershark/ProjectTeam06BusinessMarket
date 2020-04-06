@@ -1,6 +1,6 @@
 ﻿namespace ProjectTeam06BusinessMarketplaceForms
 {
-    partial class Form1
+    partial class AddOrUpdateBusinessProductForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,15 +36,16 @@
             this.labelProductPrice = new System.Windows.Forms.Label();
             this.labelBusinessId = new System.Windows.Forms.Label();
             this.labelCategoriesId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxProductId = new System.Windows.Forms.TextBox();
+            this.textBoxProductName = new System.Windows.Forms.TextBox();
+            this.textBoxProductDescription = new System.Windows.Forms.TextBox();
             this.textBoxQuantityInStock = new System.Windows.Forms.TextBox();
             this.textBoxProductPrice = new System.Windows.Forms.TextBox();
             this.textBoxBusinessId = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.buttonAddCategories = new System.Windows.Forms.Button();
-            this.buttonUpdateCategories = new System.Windows.Forms.Button();
+            this.textBoxCategoriesId = new System.Windows.Forms.TextBox();
+            this.buttonAddProduct = new System.Windows.Forms.Button();
+            this.buttonUpdateProduct = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxProduct
@@ -118,26 +119,27 @@
             this.labelCategoriesId.TabIndex = 7;
             this.labelCategoriesId.Text = "Categories Id";
             // 
-            // textBox1
+            // textBoxProductId
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBoxProductId.Location = new System.Drawing.Point(34, 163);
+            this.textBoxProductId.Name = "textBoxProductId";
+            this.textBoxProductId.Size = new System.Drawing.Size(193, 20);
+            this.textBoxProductId.TabIndex = 8;
+            this.textBoxProductId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBoxProductName
             // 
-            this.textBox2.Location = new System.Drawing.Point(34, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 20);
-            this.textBox2.TabIndex = 9;
+            this.textBoxProductName.Location = new System.Drawing.Point(34, 222);
+            this.textBoxProductName.Name = "textBoxProductName";
+            this.textBoxProductName.Size = new System.Drawing.Size(193, 20);
+            this.textBoxProductName.TabIndex = 9;
             // 
-            // textBox3
+            // textBoxProductDescription
             // 
-            this.textBox3.Location = new System.Drawing.Point(34, 271);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 20);
-            this.textBox3.TabIndex = 10;
+            this.textBoxProductDescription.Location = new System.Drawing.Point(34, 271);
+            this.textBoxProductDescription.Name = "textBoxProductDescription";
+            this.textBoxProductDescription.Size = new System.Drawing.Size(193, 20);
+            this.textBoxProductDescription.TabIndex = 10;
             // 
             // textBoxQuantityInStock
             // 
@@ -160,45 +162,56 @@
             this.textBoxBusinessId.Size = new System.Drawing.Size(193, 20);
             this.textBoxBusinessId.TabIndex = 13;
             // 
-            // textBox7
+            // textBoxCategoriesId
             // 
-            this.textBox7.Location = new System.Drawing.Point(34, 490);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(193, 20);
-            this.textBox7.TabIndex = 14;
+            this.textBoxCategoriesId.Location = new System.Drawing.Point(34, 490);
+            this.textBoxCategoriesId.Name = "textBoxCategoriesId";
+            this.textBoxCategoriesId.Size = new System.Drawing.Size(193, 20);
+            this.textBoxCategoriesId.TabIndex = 14;
             // 
-            // buttonAddCategories
+            // buttonAddProduct
             // 
-            this.buttonAddCategories.Location = new System.Drawing.Point(34, 538);
-            this.buttonAddCategories.Name = "buttonAddCategories";
-            this.buttonAddCategories.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddCategories.TabIndex = 15;
-            this.buttonAddCategories.Text = "Add";
-            this.buttonAddCategories.UseVisualStyleBackColor = true;
+            this.buttonAddProduct.CausesValidation = false;
+            this.buttonAddProduct.Location = new System.Drawing.Point(34, 538);
+            this.buttonAddProduct.Name = "buttonAddProduct";
+            this.buttonAddProduct.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddProduct.TabIndex = 15;
+            this.buttonAddProduct.Text = "Add";
+            this.buttonAddProduct.UseVisualStyleBackColor = true;
             // 
-            // buttonUpdateCategories
+            // buttonUpdateProduct
             // 
-            this.buttonUpdateCategories.Location = new System.Drawing.Point(152, 538);
-            this.buttonUpdateCategories.Name = "buttonUpdateCategories";
-            this.buttonUpdateCategories.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdateCategories.TabIndex = 16;
-            this.buttonUpdateCategories.Text = "Update ";
-            this.buttonUpdateCategories.UseVisualStyleBackColor = true;
+            this.buttonUpdateProduct.Location = new System.Drawing.Point(152, 538);
+            this.buttonUpdateProduct.Name = "buttonUpdateProduct";
+            this.buttonUpdateProduct.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdateProduct.TabIndex = 16;
+            this.buttonUpdateProduct.Text = "Update ";
+            this.buttonUpdateProduct.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(84, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "labelProdcutId";
+            // 
+            // AddOrUpdateBusinessProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 586);
-            this.Controls.Add(this.buttonUpdateCategories);
-            this.Controls.Add(this.buttonAddCategories);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonUpdateProduct);
+            this.Controls.Add(this.buttonAddProduct);
+            this.Controls.Add(this.textBoxCategoriesId);
             this.Controls.Add(this.textBoxBusinessId);
             this.Controls.Add(this.textBoxProductPrice);
             this.Controls.Add(this.textBoxQuantityInStock);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxProductDescription);
+            this.Controls.Add(this.textBoxProductName);
+            this.Controls.Add(this.textBoxProductId);
             this.Controls.Add(this.labelCategoriesId);
             this.Controls.Add(this.labelBusinessId);
             this.Controls.Add(this.labelProductPrice);
@@ -207,7 +220,7 @@
             this.Controls.Add(this.labelProdcutName);
             this.Controls.Add(this.labelProductId);
             this.Controls.Add(this.listBoxProduct);
-            this.Name = "Form1";
+            this.Name = "AddOrUpdateBusinessProductForm";
             this.Text = "Add Or Update Business Product";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,14 +237,15 @@
         private System.Windows.Forms.Label labelProductPrice;
         private System.Windows.Forms.Label labelBusinessId;
         private System.Windows.Forms.Label labelCategoriesId;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxProductId;
+        private System.Windows.Forms.TextBox textBoxProductName;
+        private System.Windows.Forms.TextBox textBoxProductDescription;
         private System.Windows.Forms.TextBox textBoxQuantityInStock;
         private System.Windows.Forms.TextBox textBoxProductPrice;
         private System.Windows.Forms.TextBox textBoxBusinessId;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button buttonAddCategories;
-        private System.Windows.Forms.Button buttonUpdateCategories;
+        private System.Windows.Forms.TextBox textBoxCategoriesId;
+        private System.Windows.Forms.Button buttonAddProduct;
+        private System.Windows.Forms.Button buttonUpdateProduct;
+        private System.Windows.Forms.Label label1;
     }
 }
