@@ -15,13 +15,14 @@ namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class ProjectTeam06BusinessMarketplaceForm : Form
     {
-        private BusinessMarketplaceEntitiesContext context;
+        public BusinessMarketplaceEntitiesContext context;
 
         public ProjectTeam06BusinessMarketplaceForm()
         {
             InitializeComponent();
 
             context = new BusinessMarketplaceEntitiesContext();
+            context.Database.Log = s => Debug.Write(s);
 
             this.Load += ProjectTeam06BusinessMarketplaceForm_Load;
 
@@ -29,47 +30,23 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
             buttonAddUpdateProduct.Click += ButtonAddUpdateProduct_Click;
+            buttonDeleteAndSeedDatabase.Click += ButtonDeleteAndSeedDatabase_Click;
         }
 
-        private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
+        private void ButtonDeleteAndSeedDatabase_Click(object sender, EventArgs e)
         {
-            AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm();
-            addOrUpdateDepartmentForm.ShowDialog();
-            context.Categories.Load();
-            dataGridViewCategories.Refresh();
-        }
-
-        private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
-        {
-            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm();
-            addOrUpdateBusinessProductForm.ShowDialog();
-            context.Businesses.Load();
-            dataGridViewBusinessProduct.Refresh();
-        }
-
-        private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
-        {
-            SeedBusinessMarketplaceDataTables();
-
-            InitalizeDataGridView<Business>(dataGridViewBussiness, context.Businesses.Local.ToBindingList(), "Orders", "Products");
-            InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
-            InitalizeDataGridView<Product>(dataGridViewBusinessProduct, context.Products.Local.ToBindingList());
-            InitalizeDataGridView<Order>(dataGridViewOrder, context.Orders.Local.ToBindingList());
-        }
-
-        private void SeedBusinessMarketplaceDataTables() 
-        {
-            context.Database.Log = s => Debug.Write(s);
-            
-            context.Database.Delete();
-            context.Database.Create();
-
+            //Clear all the records to prevent exceptions
+            context.Categories.Local.Clear();
+            context.Businesses.Local.Clear();
+            context.Products.Local.Clear();
+            context.Orders.Local.Clear();
             context.SaveChanges();
 
-            context.Businesses.Load();
-            context.Products.Load();
-            context.Orders.Load();
-            context.Categories.Load();
+            context.Database.Delete();
+            context.Database.Create();
+            context.SaveChanges();
+
+            LoadEntities();
 
             List<Category> categories = new List<Category>()
             {
@@ -105,17 +82,50 @@ namespace ProjectTeam06BusinessMarketplaceForms
             orders[0].Products.Add(products[0]);
             context.Orders.AddRange(orders);
             context.SaveChanges();
-            
-             
         }
-        
+
+        private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
+        {
+            AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm(this);
+            addOrUpdateDepartmentForm.ShowDialog();
+
+            //context.Categories.Load();
+            dataGridViewCategories.Refresh();
+        }
+
+        private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
+        {
+            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm();
+            addOrUpdateBusinessProductForm.ShowDialog();
+            context.Businesses.Load();
+            dataGridViewBusinessProduct.Refresh();
+        }
+
+        private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
+        {
+            LoadEntities();
+
+            InitalizeDataGridView<Business>(dataGridViewBussiness, context.Businesses.Local.ToBindingList(), "Orders", "Products");
+            InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
+            InitalizeDataGridView<Product>(dataGridViewBusinessProduct, context.Products.Local.ToBindingList());
+            InitalizeDataGridView<Order>(dataGridViewOrder, context.Orders.Local.ToBindingList());
+        }
+
+        private void LoadEntities()
+        {
+            context.Businesses.Load();
+            context.Products.Load();
+            context.Orders.Load();
+            context.Categories.Load();
+        }
+
         private void InitalizeDataGridView<T>(DataGridView dataGridView,BindingList<T> bindingList,params string[] columnsToIgnore)
         {
             dataGridView.DataSource = bindingList;
             dataGridView.ReadOnly = true;
             dataGridView.AllowUserToAddRows = false;
             dataGridView.AllowUserToDeleteRows = false;
-            dataGridView.RowHeadersVisible = false;
+            //dataGridView.RowHeadersVisible = true;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             // autosize the row heights, but only those displayed to improve performance
             dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
@@ -125,7 +135,5 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 dataGridView.Columns[columnToIgnore].Visible = false;
             }
         }
-
-       
     }
 }

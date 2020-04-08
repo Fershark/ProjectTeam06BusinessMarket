@@ -139,6 +139,7 @@
             this.Controls.Add(this.labelCategoriesName);
             this.Controls.Add(this.listBoxCategories);
             this.Name = "AddOrUpdateCategoriesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add or Update Categories";
             this.ResumeLayout(false);
             this.PerformLayout();
