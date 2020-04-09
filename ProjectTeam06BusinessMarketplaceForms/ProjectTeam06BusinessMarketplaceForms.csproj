@@ -70,6 +70,12 @@
     <Compile Include="AddOrUpdateCategoriesForm.Designer.cs">
       <DependentUpon>AddOrUpdateCategoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddOrUpdateBusinessNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrUpdateBusinessNameForm.Designer.cs">
+      <DependentUpon>AddOrUpdateBusinessNameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectTeam06BusinessMarketplaceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="ProjectTeam06BusinessMarketplace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddOrUpdateBusinessNameForm.resx">
+      <DependentUpon>AddOrUpdateBusinessNameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddOrUpdateBusinessProductForm.resx">
       <DependentUpon>AddOrUpdateBusinessProductForm.cs</DependentUpon>
     </EmbeddedResource>
