@@ -15,7 +15,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class ProjectTeam06BusinessMarketplaceForm : Form
     {
-        public BusinessMarketplaceEntitiesContext context;
+        private BusinessMarketplaceEntitiesContext context;
 
         public ProjectTeam06BusinessMarketplaceForm()
         {
@@ -86,7 +86,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
         {
-            AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm(this);
+            AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm(context);
             addOrUpdateDepartmentForm.ShowDialog();
 
             //context.Categories.Load();

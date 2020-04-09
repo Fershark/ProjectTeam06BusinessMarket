@@ -18,12 +18,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
         private BusinessMarketplaceEntitiesContext context;
         private Category category;
 
-        public AddOrUpdateCategoriesForm(ProjectTeam06BusinessMarketplaceForm mainForm)
+        public AddOrUpdateCategoriesForm(BusinessMarketplaceEntitiesContext context)
         {
             InitializeComponent();
 
 
-            context = mainForm.context;
+            this.context = context;
             Load += AddOrUpdateCategoriesForm_Load;
 
             buttonAddCategories.Click += ButtonAddCategories_Click;
