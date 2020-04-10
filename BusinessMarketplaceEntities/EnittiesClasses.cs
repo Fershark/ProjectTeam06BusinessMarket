@@ -45,6 +45,11 @@ namespace BusinessMarketplaceEntitiesNS
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
+
+        public override string ToString()
+        {
+            return Id + ": " + Name;
+        }
     }
 
     [Table("Products")]

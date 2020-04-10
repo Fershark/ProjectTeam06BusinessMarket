@@ -122,34 +122,34 @@
             // 
             this.textBoxProductName.Location = new System.Drawing.Point(34, 222);
             this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new System.Drawing.Size(193, 20);
+            this.textBoxProductName.Size = new System.Drawing.Size(291, 20);
             this.textBoxProductName.TabIndex = 9;
             // 
             // textBoxProductDescription
             // 
             this.textBoxProductDescription.Location = new System.Drawing.Point(34, 271);
             this.textBoxProductDescription.Name = "textBoxProductDescription";
-            this.textBoxProductDescription.Size = new System.Drawing.Size(193, 20);
+            this.textBoxProductDescription.Size = new System.Drawing.Size(291, 20);
             this.textBoxProductDescription.TabIndex = 10;
             // 
             // textBoxQuantityInStock
             // 
             this.textBoxQuantityInStock.Location = new System.Drawing.Point(34, 329);
             this.textBoxQuantityInStock.Name = "textBoxQuantityInStock";
-            this.textBoxQuantityInStock.Size = new System.Drawing.Size(193, 20);
+            this.textBoxQuantityInStock.Size = new System.Drawing.Size(291, 20);
             this.textBoxQuantityInStock.TabIndex = 11;
             // 
             // textBoxProductPrice
             // 
             this.textBoxProductPrice.Location = new System.Drawing.Point(34, 382);
             this.textBoxProductPrice.Name = "textBoxProductPrice";
-            this.textBoxProductPrice.Size = new System.Drawing.Size(193, 20);
+            this.textBoxProductPrice.Size = new System.Drawing.Size(291, 20);
             this.textBoxProductPrice.TabIndex = 12;
             // 
             // buttonAddProduct
             // 
             this.buttonAddProduct.CausesValidation = false;
-            this.buttonAddProduct.Location = new System.Drawing.Point(93, 116);
+            this.buttonAddProduct.Location = new System.Drawing.Point(123, 116);
             this.buttonAddProduct.Name = "buttonAddProduct";
             this.buttonAddProduct.Size = new System.Drawing.Size(75, 23);
             this.buttonAddProduct.TabIndex = 15;
@@ -158,7 +158,7 @@
             // 
             // buttonUpdateProduct
             // 
-            this.buttonUpdateProduct.Location = new System.Drawing.Point(93, 538);
+            this.buttonUpdateProduct.Location = new System.Drawing.Point(123, 533);
             this.buttonUpdateProduct.Name = "buttonUpdateProduct";
             this.buttonUpdateProduct.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdateProduct.TabIndex = 16;

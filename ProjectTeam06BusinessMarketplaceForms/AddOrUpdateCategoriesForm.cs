@@ -22,8 +22,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
             InitializeComponent();
 
-
             this.context = context;
+
             Load += AddOrUpdateCategoriesForm_Load;
 
             buttonAddCategories.Click += ButtonAddCategories_Click;
