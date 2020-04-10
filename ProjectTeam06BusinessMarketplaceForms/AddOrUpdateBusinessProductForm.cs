@@ -19,44 +19,35 @@ using BusinessMarketplaceEntitiesNS;
             private BusinessMarketplaceEntitiesContext context;
             private Product product;
 
-            public AddOrUpdateBusinessProductForm()
+            public AddOrUpdateBusinessProductForm(ProjectTeam06BusinessMarketplaceForm mainForm)
             {
                 InitializeComponent();
 
-                context = new BusinessMarketplaceEntitiesContext();
-                context.Database.Log = s => Debug.Write(s);
-                context.SaveChanges();
-
+                context = mainForm.context;
                 Load += AddOrUpdateBusinessProductForm_Load;
 
                 buttonAddProduct.Click += ButtonAddProduct_Click;
-                listBoxProduct.SelectedIndexChanged += ListBoxBusiness_SelectedIndexChanged;
+                listBoxProduct.SelectedIndexChanged += ListBoxBusinessProduct_SelectedIndexChanged;
                 buttonUpdateProduct.Click += ButtonUpdateProduct_Click;
-
             }
-
-            private void ListBoxBusiness_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Select index of listbox callback.
+        /// If the value selected is of business name it maps its values to the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListBoxBusinessProduct_SelectedIndexChanged(object sender, EventArgs e)
             {
                 if (listBoxProduct.SelectedValue is Product p)
                 {
                     product = p;
                     MapProductToForm();
                 }
-
-
             }
-            //mistake
-            private void textBox1_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-
+           
             private void ButtonAddProduct_Click(object sender, EventArgs e)
             {
-
                 CleanForm();
-
-
             }
             private void AddOrUpdateBusinessProductForm_Load(object sender, EventArgs e)
             {
@@ -69,8 +60,10 @@ using BusinessMarketplaceEntitiesNS;
                 context.SaveChanges();
                 context.Businesses.Load();
 
+                // We force the refresh of the listbox since without reassigning the data source
+                // the listBox data doesn't change
                 listBoxProduct.DataSource = null;
-                listBoxProduct.DataSource = context.Businesses.Local.ToBindingList();
+                listBoxProduct.DataSource = context.Products.Local.ToBindingList();
             }
 
             private void CleanForm()
@@ -98,8 +91,7 @@ using BusinessMarketplaceEntitiesNS;
                 string quantityInStock = textBoxQuantityInStock.Text;
                 string price = textBoxProductPrice.Text;
                 string message = "";
-                /* string name = textBoxProductName.Text;
-                 string name = textBoxProductName.Text;*/
+           
 
 
                 if (name.Trim().Length == 0)
@@ -141,7 +133,13 @@ using BusinessMarketplaceEntitiesNS;
 
 
             }
+
+        //mistake
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 
 

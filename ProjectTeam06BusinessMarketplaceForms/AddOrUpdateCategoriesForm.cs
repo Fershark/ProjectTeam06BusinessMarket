@@ -22,7 +22,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
             InitializeComponent();
 
-
             context = mainForm.context;
             Load += AddOrUpdateCategoriesForm_Load;
 

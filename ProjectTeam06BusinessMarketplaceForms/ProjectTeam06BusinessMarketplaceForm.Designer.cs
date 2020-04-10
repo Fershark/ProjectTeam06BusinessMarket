@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageAdmin = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -44,7 +44,7 @@
             this.buttonAddUpdateCategories = new System.Windows.Forms.Button();
             this.dataGridViewCategories = new System.Windows.Forms.DataGridView();
             this.labelCategories = new System.Windows.Forms.Label();
-            this.dataGridViewBussiness = new System.Windows.Forms.DataGridView();
+            this.dataGridViewBussinessName = new System.Windows.Forms.DataGridView();
             this.labelBusinesses = new System.Windows.Forms.Label();
             this.tabPageBusiness = new System.Windows.Forms.TabPage();
             this.buttonPurchase = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBackupDatabases)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBussiness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBussinessName)).BeginInit();
             this.tabPageBusiness.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
@@ -94,7 +94,7 @@
             this.tabPageAdmin.Controls.Add(this.buttonAddUpdateCategories);
             this.tabPageAdmin.Controls.Add(this.dataGridViewCategories);
             this.tabPageAdmin.Controls.Add(this.labelCategories);
-            this.tabPageAdmin.Controls.Add(this.dataGridViewBussiness);
+            this.tabPageAdmin.Controls.Add(this.dataGridViewBussinessName);
             this.tabPageAdmin.Controls.Add(this.labelBusinesses);
             this.tabPageAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdmin.Location = new System.Drawing.Point(4, 29);
@@ -107,33 +107,33 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Location = new System.Drawing.Point(533, 274);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.Size = new System.Drawing.Size(262, 138);
             this.dataGridView1.TabIndex = 12;
             // 
@@ -233,13 +233,13 @@
             this.labelCategories.TabIndex = 2;
             this.labelCategories.Text = "Categories";
             // 
-            // dataGridViewBussiness
+            // dataGridViewBussinessName
             // 
-            this.dataGridViewBussiness.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBussiness.Location = new System.Drawing.Point(29, 38);
-            this.dataGridViewBussiness.Name = "dataGridViewBussiness";
-            this.dataGridViewBussiness.Size = new System.Drawing.Size(807, 128);
-            this.dataGridViewBussiness.TabIndex = 1;
+            this.dataGridViewBussinessName.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBussinessName.Location = new System.Drawing.Point(29, 38);
+            this.dataGridViewBussinessName.Name = "dataGridViewBussinessName";
+            this.dataGridViewBussinessName.Size = new System.Drawing.Size(807, 128);
+            this.dataGridViewBussinessName.TabIndex = 1;
             // 
             // labelBusinesses
             // 
@@ -275,9 +275,9 @@
             // buttonPurchase
             // 
             this.buttonPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPurchase.Location = new System.Drawing.Point(661, 269);
+            this.buttonPurchase.Location = new System.Drawing.Point(331, 377);
             this.buttonPurchase.Name = "buttonPurchase";
-            this.buttonPurchase.Size = new System.Drawing.Size(167, 39);
+            this.buttonPurchase.Size = new System.Drawing.Size(167, 31);
             this.buttonPurchase.TabIndex = 9;
             this.buttonPurchase.Text = "Purchase";
             this.buttonPurchase.UseVisualStyleBackColor = true;
@@ -285,9 +285,9 @@
             // buttonAddUpdateProduct
             // 
             this.buttonAddUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUpdateProduct.Location = new System.Drawing.Point(661, 85);
+            this.buttonAddUpdateProduct.Location = new System.Drawing.Point(322, 185);
             this.buttonAddUpdateProduct.Name = "buttonAddUpdateProduct";
-            this.buttonAddUpdateProduct.Size = new System.Drawing.Size(199, 56);
+            this.buttonAddUpdateProduct.Size = new System.Drawing.Size(199, 31);
             this.buttonAddUpdateProduct.TabIndex = 8;
             this.buttonAddUpdateProduct.Text = "Add/Update Product";
             this.buttonAddUpdateProduct.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             // dataGridViewPastOrder
             // 
             this.dataGridViewPastOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPastOrder.Location = new System.Drawing.Point(501, 433);
+            this.dataGridViewPastOrder.Location = new System.Drawing.Point(472, 470);
             this.dataGridViewPastOrder.Name = "dataGridViewPastOrder";
             this.dataGridViewPastOrder.Size = new System.Drawing.Size(371, 124);
             this.dataGridViewPastOrder.TabIndex = 7;
@@ -304,7 +304,7 @@
             // 
             this.labelPastOrder.AutoSize = true;
             this.labelPastOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPastOrder.Location = new System.Drawing.Point(498, 397);
+            this.labelPastOrder.Location = new System.Drawing.Point(468, 426);
             this.labelPastOrder.Name = "labelPastOrder";
             this.labelPastOrder.Size = new System.Drawing.Size(95, 20);
             this.labelPastOrder.TabIndex = 6;
@@ -313,7 +313,7 @@
             // dataGridViewOrder
             // 
             this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(26, 433);
+            this.dataGridViewOrder.Location = new System.Drawing.Point(23, 470);
             this.dataGridViewOrder.Name = "dataGridViewOrder";
             this.dataGridViewOrder.Size = new System.Drawing.Size(372, 124);
             this.dataGridViewOrder.TabIndex = 5;
@@ -322,7 +322,7 @@
             // 
             this.labelOrder.AutoSize = true;
             this.labelOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrder.Location = new System.Drawing.Point(23, 397);
+            this.labelOrder.Location = new System.Drawing.Point(23, 426);
             this.labelOrder.Name = "labelOrder";
             this.labelOrder.Size = new System.Drawing.Size(54, 20);
             this.labelOrder.TabIndex = 4;
@@ -331,16 +331,16 @@
             // dataGridViewOtherProduct
             // 
             this.dataGridViewOtherProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOtherProduct.Location = new System.Drawing.Point(26, 232);
+            this.dataGridViewOtherProduct.Location = new System.Drawing.Point(27, 249);
             this.dataGridViewOtherProduct.Name = "dataGridViewOtherProduct";
-            this.dataGridViewOtherProduct.Size = new System.Drawing.Size(569, 136);
+            this.dataGridViewOtherProduct.Size = new System.Drawing.Size(802, 122);
             this.dataGridViewOtherProduct.TabIndex = 3;
             // 
             // labelOtherProduct
             // 
             this.labelOtherProduct.AutoSize = true;
             this.labelOtherProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOtherProduct.Location = new System.Drawing.Point(23, 207);
+            this.labelOtherProduct.Location = new System.Drawing.Point(23, 216);
             this.labelOtherProduct.Name = "labelOtherProduct";
             this.labelOtherProduct.Size = new System.Drawing.Size(71, 20);
             this.labelOtherProduct.TabIndex = 2;
@@ -351,7 +351,7 @@
             this.dataGridViewBusinessProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBusinessProduct.Location = new System.Drawing.Point(23, 54);
             this.dataGridViewBusinessProduct.Name = "dataGridViewBusinessProduct";
-            this.dataGridViewBusinessProduct.Size = new System.Drawing.Size(569, 126);
+            this.dataGridViewBusinessProduct.Size = new System.Drawing.Size(805, 125);
             this.dataGridViewBusinessProduct.TabIndex = 1;
             // 
             // labelBusinessProduct
@@ -379,7 +379,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBackupDatabases)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBussiness)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBussinessName)).EndInit();
             this.tabPageBusiness.ResumeLayout(false);
             this.tabPageBusiness.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastOrder)).EndInit();
@@ -396,7 +396,7 @@
         private System.Windows.Forms.TabPage tabPageAdmin;
         private System.Windows.Forms.TabPage tabPageBusiness;
         private System.Windows.Forms.Label labelBusinesses;
-        private System.Windows.Forms.DataGridView dataGridViewBussiness;
+        private System.Windows.Forms.DataGridView dataGridViewBussinessName;
         private System.Windows.Forms.Label labelCategories;
         private System.Windows.Forms.DataGridView dataGridViewCategories;
         private System.Windows.Forms.Label labelBusinessProduct;

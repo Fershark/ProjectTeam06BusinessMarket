@@ -28,9 +28,11 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             this.FormClosed += (s, e) => context.Dispose();
 
+            buttonAddUpdateBusinesses.Click += ButtonAddUpdateBusinessName_Click;
             buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
             buttonAddUpdateProduct.Click += ButtonAddUpdateProduct_Click;
             buttonDeleteAndSeedDatabase.Click += ButtonDeleteAndSeedDatabase_Click;
+           
         }
 
         private void ButtonDeleteAndSeedDatabase_Click(object sender, EventArgs e)
@@ -71,6 +73,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             List<Product> products = new List<Product>()
             {
                 new Product {Name = "Continuous Sushi Roll Machine", Description = "Creates delicious Norimaki with a fluffly rice sheet", QuantityInStock = 10, Price = (decimal) 1001, Category = categories[0], Business = businesses[1] }
+          
             };
             context.Products.AddRange(products);
             context.SaveChanges();
@@ -95,17 +98,24 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
         {
-            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm();
+            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(this);
             addOrUpdateBusinessProductForm.ShowDialog();
-            context.Businesses.Load();
+
             dataGridViewBusinessProduct.Refresh();
         }
 
+        private void ButtonAddUpdateBusinessName_Click(object sender, EventArgs e)
+        {
+            AddOrUpdateBusinessNameForm addOrUpdateBusinessNameForm = new AddOrUpdateBusinessNameForm(this);
+            addOrUpdateBusinessNameForm.ShowDialog();
+
+            dataGridViewBussinessName.Refresh();
+        }
         private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
         {
             LoadEntities();
 
-            InitalizeDataGridView<Business>(dataGridViewBussiness, context.Businesses.Local.ToBindingList(), "Orders", "Products");
+            InitalizeDataGridView<Business>(dataGridViewBussinessName, context.Businesses.Local.ToBindingList(), "Orders", "Products");
             InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
             InitalizeDataGridView<Product>(dataGridViewBusinessProduct, context.Products.Local.ToBindingList());
             InitalizeDataGridView<Order>(dataGridViewOrder, context.Orders.Local.ToBindingList());
