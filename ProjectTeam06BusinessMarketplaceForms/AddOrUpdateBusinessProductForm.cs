@@ -19,11 +19,11 @@ using BusinessMarketplaceEntitiesNS;
             private BusinessMarketplaceEntitiesContext context;
             private Product product;
 
-            public AddOrUpdateBusinessProductForm(ProjectTeam06BusinessMarketplaceForm mainForm)
+            public AddOrUpdateBusinessProductForm(BusinessMarketplaceEntitiesContext context)
             {
                 InitializeComponent();
 
-                context = mainForm.context;
+                this.context = context;
                 Load += AddOrUpdateBusinessProductForm_Load;
 
                 buttonAddProduct.Click += ButtonAddProduct_Click;

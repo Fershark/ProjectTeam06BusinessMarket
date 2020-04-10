@@ -175,7 +175,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
         {
-            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(this);
+            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(context);
             addOrUpdateBusinessProductForm.ShowDialog();
 
             dataGridViewBusinessProduct.Refresh();
@@ -183,7 +183,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ButtonAddUpdateBusinessName_Click(object sender, EventArgs e)
         {
-            AddOrUpdateBusinessNameForm addOrUpdateBusinessNameForm = new AddOrUpdateBusinessNameForm(this);
+            AddOrUpdateBusinessNameForm addOrUpdateBusinessNameForm = new AddOrUpdateBusinessNameForm(context);
             addOrUpdateBusinessNameForm.ShowDialog();
 
             dataGridViewBussinessName.Refresh();
