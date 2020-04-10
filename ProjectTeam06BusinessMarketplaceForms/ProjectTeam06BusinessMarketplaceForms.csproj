@@ -76,6 +76,12 @@
     <Compile Include="AddOrUpdateBusinessNameForm.Designer.cs">
       <DependentUpon>AddOrUpdateBusinessNameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectTeam06BusinessMarketplaceAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectTeam06BusinessMarketplaceBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ProjectTeam06BusinessMarketplaceForm.cs">
       <SubType>Form</SubType>
     </Compile>
