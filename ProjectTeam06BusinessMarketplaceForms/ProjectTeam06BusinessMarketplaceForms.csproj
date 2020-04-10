@@ -124,6 +124,10 @@
       <Project>{6906bc32-9887-45db-9e22-b1309e6f6920}</Project>
       <Name>BusinessMarketplaceEntitiesNS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataTableAccessLayer\DataTableAccessLayer.csproj">
+      <Project>{17b16d02-6d2d-4a40-95c7-b492f3d78018}</Project>
+      <Name>DataTableAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

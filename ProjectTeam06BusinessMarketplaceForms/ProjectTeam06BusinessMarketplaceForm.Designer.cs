@@ -57,6 +57,7 @@
             this.labelOtherProduct = new System.Windows.Forms.Label();
             this.dataGridViewBusinessProduct = new System.Windows.Forms.DataGridView();
             this.labelBusinessProduct = new System.Windows.Forms.Label();
+            this.buttonRestoreDatabase = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,6 +84,7 @@
             // 
             // tabPageAdmin
             // 
+            this.tabPageAdmin.Controls.Add(this.buttonRestoreDatabase);
             this.tabPageAdmin.Controls.Add(this.dataGridView1);
             this.tabPageAdmin.Controls.Add(this.labelProductsSold);
             this.tabPageAdmin.Controls.Add(this.labelOrdersSold);
@@ -160,7 +162,7 @@
             // buttonBackupDatabase
             // 
             this.buttonBackupDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBackupDatabase.Location = new System.Drawing.Point(669, 616);
+            this.buttonBackupDatabase.Location = new System.Drawing.Point(582, 616);
             this.buttonBackupDatabase.Name = "buttonBackupDatabase";
             this.buttonBackupDatabase.Size = new System.Drawing.Size(126, 51);
             this.buttonBackupDatabase.TabIndex = 9;
@@ -170,7 +172,7 @@
             // buttonDeleteAndSeedDatabase
             // 
             this.buttonDeleteAndSeedDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteAndSeedDatabase.Location = new System.Drawing.Point(489, 616);
+            this.buttonDeleteAndSeedDatabase.Location = new System.Drawing.Point(435, 616);
             this.buttonDeleteAndSeedDatabase.Name = "buttonDeleteAndSeedDatabase";
             this.buttonDeleteAndSeedDatabase.Size = new System.Drawing.Size(126, 51);
             this.buttonDeleteAndSeedDatabase.TabIndex = 8;
@@ -364,6 +366,16 @@
             this.labelBusinessProduct.TabIndex = 0;
             this.labelBusinessProduct.Text = "Business Product";
             // 
+            // buttonRestoreDatabase
+            // 
+            this.buttonRestoreDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestoreDatabase.Location = new System.Drawing.Point(728, 616);
+            this.buttonRestoreDatabase.Name = "buttonRestoreDatabase";
+            this.buttonRestoreDatabase.Size = new System.Drawing.Size(126, 51);
+            this.buttonRestoreDatabase.TabIndex = 13;
+            this.buttonRestoreDatabase.Text = "Restore database";
+            this.buttonRestoreDatabase.UseVisualStyleBackColor = true;
+            // 
             // ProjectTeam06BusinessMarketplaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,6 +430,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelProductsSold;
         private System.Windows.Forms.Label labelOrdersSold;
+        private System.Windows.Forms.Button buttonRestoreDatabase;
     }
 }
 
