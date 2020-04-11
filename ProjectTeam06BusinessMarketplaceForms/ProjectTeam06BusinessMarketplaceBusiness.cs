@@ -19,7 +19,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void InitBusinessComponents()
         {
-            comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
+            SetBusinessComboBox();
 
             buttonAddUpdateProduct.Click += ButtonAddUpdateProduct_Click;
             comboBoxBusinessSelected.SelectedIndexChanged += ComboBoxBusinessSelected_SelectedIndexChanged;
@@ -28,6 +28,14 @@ namespace ProjectTeam06BusinessMarketplaceForms
             //The index is changed twice to trigger the event
             comboBoxBusinessSelected.SelectedIndex = -1;
             comboBoxBusinessSelected.SelectedIndex = 0;
+        }
+
+        private void SetBusinessComboBox()
+        {
+            // We force the refresh of the listbox since without reassigning the data source
+            // the listBox data doesn't change
+            comboBoxBusinessSelected.DataSource = null;
+            comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
         }
 
         private void ComboBoxBusinessSelected_SelectedIndexChanged(object sender, EventArgs e)

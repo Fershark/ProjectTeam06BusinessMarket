@@ -32,6 +32,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             AddOrUpdateBusinessNameForm addOrUpdateBusinessNameForm = new AddOrUpdateBusinessNameForm(context);
             addOrUpdateBusinessNameForm.ShowDialog();
             dataGridViewBussinessName.Refresh();
+            
+            //For Business correct load in business tab
+            SetBusinessComboBox();
         }
 
         private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
@@ -83,8 +86,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.SaveChanges();
 
             //For Business correct load in business tab
-            comboBoxBusinessSelected.DataSource = null;
-            comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
+            SetBusinessComboBox();
 
             MessageBox.Show("Database seeded correctly.");
         }
@@ -166,8 +168,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 LoadEntities();
 
                 //For Business correct load in business tab
-                comboBoxBusinessSelected.DataSource = null;
-                comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
+                SetBusinessComboBox();
 
                 if (result)
                 {
