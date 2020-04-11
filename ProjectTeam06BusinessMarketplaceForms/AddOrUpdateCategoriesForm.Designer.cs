@@ -50,55 +50,57 @@
             // labelCategoriesName
             // 
             this.labelCategoriesName.AutoSize = true;
-            this.labelCategoriesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCategoriesName.Location = new System.Drawing.Point(31, 246);
+            this.labelCategoriesName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoriesName.Location = new System.Drawing.Point(32, 215);
             this.labelCategoriesName.Name = "labelCategoriesName";
-            this.labelCategoriesName.Size = new System.Drawing.Size(132, 20);
+            this.labelCategoriesName.Size = new System.Drawing.Size(80, 13);
             this.labelCategoriesName.TabIndex = 1;
             this.labelCategoriesName.Text = "Category Name";
             // 
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(31, 334);
+            this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.Location = new System.Drawing.Point(32, 254);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(100, 20);
+            this.labelDescription.Size = new System.Drawing.Size(60, 13);
             this.labelDescription.TabIndex = 2;
             this.labelDescription.Text = "Description";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(35, 269);
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Location = new System.Drawing.Point(35, 231);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(191, 44);
+            this.textBoxName.Size = new System.Drawing.Size(191, 20);
             this.textBoxName.TabIndex = 3;
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(35, 357);
+            this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescription.Location = new System.Drawing.Point(35, 270);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(194, 44);
+            this.textBoxDescription.Size = new System.Drawing.Size(194, 20);
             this.textBoxDescription.TabIndex = 4;
             // 
             // buttonAddCategories
             // 
-            this.buttonAddCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddCategories.Location = new System.Drawing.Point(98, 139);
             this.buttonAddCategories.Name = "buttonAddCategories";
-            this.buttonAddCategories.Size = new System.Drawing.Size(75, 35);
+            this.buttonAddCategories.Size = new System.Drawing.Size(75, 23);
             this.buttonAddCategories.TabIndex = 5;
             this.buttonAddCategories.Text = "Add";
             this.buttonAddCategories.UseVisualStyleBackColor = true;
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.Location = new System.Drawing.Point(98, 425);
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Location = new System.Drawing.Point(98, 296);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(75, 35);
+            this.buttonSubmit.Size = new System.Drawing.Size(75, 23);
             this.buttonSubmit.TabIndex = 6;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = true;
@@ -106,21 +108,21 @@
             // labelIdDescription
             // 
             this.labelIdDescription.AutoSize = true;
-            this.labelIdDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdDescription.Location = new System.Drawing.Point(31, 214);
+            this.labelIdDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdDescription.Location = new System.Drawing.Point(32, 183);
             this.labelIdDescription.Name = "labelIdDescription";
-            this.labelIdDescription.Size = new System.Drawing.Size(28, 20);
+            this.labelIdDescription.Size = new System.Drawing.Size(63, 13);
             this.labelIdDescription.TabIndex = 7;
-            this.labelIdDescription.Text = "ID";
+            this.labelIdDescription.Text = "Category ID";
             // 
             // labelId
             // 
             this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelId.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.labelId.Location = new System.Drawing.Point(62, 214);
+            this.labelId.Location = new System.Drawing.Point(101, 183);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(14, 20);
+            this.labelId.Size = new System.Drawing.Size(10, 13);
             this.labelId.TabIndex = 8;
             this.labelId.Text = " ";
             // 
@@ -128,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 502);
+            this.ClientSize = new System.Drawing.Size(280, 334);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.labelIdDescription);
             this.Controls.Add(this.buttonSubmit);

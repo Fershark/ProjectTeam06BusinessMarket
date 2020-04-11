@@ -28,57 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageAdmin = new System.Windows.Forms.TabPage();
-            this.buttonRestoreDatabase = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelProductsSold = new System.Windows.Forms.Label();
-            this.labelOrdersSold = new System.Windows.Forms.Label();
+            this.buttonReportsAdmin = new System.Windows.Forms.Button();
+            this.groupBoxCategories = new System.Windows.Forms.GroupBox();
+            this.dataGridViewCategories = new System.Windows.Forms.DataGridView();
+            this.buttonAddUpdateCategories = new System.Windows.Forms.Button();
+            this.groupBoxDatabaseTools = new System.Windows.Forms.GroupBox();
             this.buttonBackupDatabase = new System.Windows.Forms.Button();
             this.buttonDeleteAndSeedDatabase = new System.Windows.Forms.Button();
-            this.buttonAddUpdateBusinesses = new System.Windows.Forms.Button();
-            this.dataGridViewBackupDatabases = new System.Windows.Forms.DataGridView();
-            this.labelBackupDatabase = new System.Windows.Forms.Label();
-            this.buttonAddUpdateCategories = new System.Windows.Forms.Button();
-            this.dataGridViewCategories = new System.Windows.Forms.DataGridView();
-            this.labelCategories = new System.Windows.Forms.Label();
+            this.buttonRestoreDatabase = new System.Windows.Forms.Button();
+            this.groupBoxBusinesses = new System.Windows.Forms.GroupBox();
             this.dataGridViewBussinessName = new System.Windows.Forms.DataGridView();
-            this.labelBusinesses = new System.Windows.Forms.Label();
+            this.buttonAddUpdateBusinesses = new System.Windows.Forms.Button();
             this.tabPageBusiness = new System.Windows.Forms.TabPage();
             this.groupBoxBusinessData = new System.Windows.Forms.GroupBox();
+            this.buttonOrders = new System.Windows.Forms.Button();
+            this.buttonShop = new System.Windows.Forms.Button();
             this.labelBusinessAddress = new System.Windows.Forms.Label();
             this.labelBusinessAddressData = new System.Windows.Forms.Label();
             this.labelBusinessEmail = new System.Windows.Forms.Label();
             this.labelBusinessEmailData = new System.Windows.Forms.Label();
+            this.labelBusinessProduct = new System.Windows.Forms.Label();
+            this.buttonAddUpdateProduct = new System.Windows.Forms.Button();
+            this.dataGridViewBusinessProduct = new System.Windows.Forms.DataGridView();
             this.labelInstructions = new System.Windows.Forms.Label();
             this.labelBusinessSelected = new System.Windows.Forms.Label();
             this.comboBoxBusinessSelected = new System.Windows.Forms.ComboBox();
-            this.buttonPurchase = new System.Windows.Forms.Button();
-            this.buttonAddUpdateProduct = new System.Windows.Forms.Button();
-            this.dataGridViewPastOrder = new System.Windows.Forms.DataGridView();
-            this.labelPastOrder = new System.Windows.Forms.Label();
-            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
-            this.labelOrder = new System.Windows.Forms.Label();
-            this.dataGridViewOtherProduct = new System.Windows.Forms.DataGridView();
-            this.labelOtherProduct = new System.Windows.Forms.Label();
-            this.dataGridViewBusinessProduct = new System.Windows.Forms.DataGridView();
-            this.labelBusinessProduct = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageAdmin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBackupDatabases)).BeginInit();
+            this.groupBoxCategories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).BeginInit();
+            this.groupBoxDatabaseTools.SuspendLayout();
+            this.groupBoxBusinesses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBussinessName)).BeginInit();
             this.tabPageBusiness.SuspendLayout();
             this.groupBoxBusinessData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOtherProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusinessProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,100 +84,109 @@
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(855, 784);
+            this.tabControl.Size = new System.Drawing.Size(855, 597);
             this.tabControl.TabIndex = 0;
             // 
             // tabPageAdmin
             // 
-            this.tabPageAdmin.Controls.Add(this.buttonRestoreDatabase);
-            this.tabPageAdmin.Controls.Add(this.dataGridView1);
-            this.tabPageAdmin.Controls.Add(this.labelProductsSold);
-            this.tabPageAdmin.Controls.Add(this.labelOrdersSold);
-            this.tabPageAdmin.Controls.Add(this.buttonBackupDatabase);
-            this.tabPageAdmin.Controls.Add(this.buttonDeleteAndSeedDatabase);
-            this.tabPageAdmin.Controls.Add(this.buttonAddUpdateBusinesses);
-            this.tabPageAdmin.Controls.Add(this.dataGridViewBackupDatabases);
-            this.tabPageAdmin.Controls.Add(this.labelBackupDatabase);
-            this.tabPageAdmin.Controls.Add(this.buttonAddUpdateCategories);
-            this.tabPageAdmin.Controls.Add(this.dataGridViewCategories);
-            this.tabPageAdmin.Controls.Add(this.labelCategories);
-            this.tabPageAdmin.Controls.Add(this.dataGridViewBussinessName);
-            this.tabPageAdmin.Controls.Add(this.labelBusinesses);
+            this.tabPageAdmin.Controls.Add(this.buttonReportsAdmin);
+            this.tabPageAdmin.Controls.Add(this.groupBoxCategories);
+            this.tabPageAdmin.Controls.Add(this.groupBoxDatabaseTools);
+            this.tabPageAdmin.Controls.Add(this.groupBoxBusinesses);
             this.tabPageAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdmin.Location = new System.Drawing.Point(4, 29);
             this.tabPageAdmin.Name = "tabPageAdmin";
             this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAdmin.Size = new System.Drawing.Size(847, 776);
+            this.tabPageAdmin.Size = new System.Drawing.Size(847, 564);
             this.tabPageAdmin.TabIndex = 0;
             this.tabPageAdmin.Text = "Admin";
             this.tabPageAdmin.UseVisualStyleBackColor = true;
             // 
-            // buttonRestoreDatabase
+            // buttonReportsAdmin
             // 
-            this.buttonRestoreDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestoreDatabase.Location = new System.Drawing.Point(728, 616);
-            this.buttonRestoreDatabase.Name = "buttonRestoreDatabase";
-            this.buttonRestoreDatabase.Size = new System.Drawing.Size(126, 51);
-            this.buttonRestoreDatabase.TabIndex = 13;
-            this.buttonRestoreDatabase.Text = "Restore database";
-            this.buttonRestoreDatabase.UseVisualStyleBackColor = true;
+            this.buttonReportsAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReportsAdmin.Location = new System.Drawing.Point(538, 466);
+            this.buttonReportsAdmin.Name = "buttonReportsAdmin";
+            this.buttonReportsAdmin.Size = new System.Drawing.Size(126, 33);
+            this.buttonReportsAdmin.TabIndex = 17;
+            this.buttonReportsAdmin.Text = "Reports";
+            this.buttonReportsAdmin.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // groupBoxCategories
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView1.Location = new System.Drawing.Point(533, 274);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridView1.Size = new System.Drawing.Size(262, 138);
-            this.dataGridView1.TabIndex = 12;
+            this.groupBoxCategories.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxCategories.Controls.Add(this.dataGridViewCategories);
+            this.groupBoxCategories.Controls.Add(this.buttonAddUpdateCategories);
+            this.groupBoxCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCategories.Location = new System.Drawing.Point(20, 329);
+            this.groupBoxCategories.Name = "groupBoxCategories";
+            this.groupBoxCategories.Size = new System.Drawing.Size(345, 215);
+            this.groupBoxCategories.TabIndex = 16;
+            this.groupBoxCategories.TabStop = false;
+            this.groupBoxCategories.Text = "Categories";
             // 
-            // labelProductsSold
+            // dataGridViewCategories
             // 
-            this.labelProductsSold.AutoSize = true;
-            this.labelProductsSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductsSold.Location = new System.Drawing.Point(529, 251);
-            this.labelProductsSold.Name = "labelProductsSold";
-            this.labelProductsSold.Size = new System.Drawing.Size(121, 20);
-            this.labelProductsSold.TabIndex = 11;
-            this.labelProductsSold.Text = "Products Sold";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCategories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCategories.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewCategories.Location = new System.Drawing.Point(9, 25);
+            this.dataGridViewCategories.Name = "dataGridViewCategories";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCategories.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dataGridViewCategories.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewCategories.Size = new System.Drawing.Size(330, 145);
+            this.dataGridViewCategories.TabIndex = 3;
             // 
-            // labelOrdersSold
+            // buttonAddUpdateCategories
             // 
-            this.labelOrdersSold.AutoSize = true;
-            this.labelOrdersSold.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrdersSold.Location = new System.Drawing.Point(26, 251);
-            this.labelOrdersSold.Name = "labelOrdersSold";
-            this.labelOrdersSold.Size = new System.Drawing.Size(101, 20);
-            this.labelOrdersSold.TabIndex = 10;
-            this.labelOrdersSold.Text = "Orders sold";
+            this.buttonAddUpdateCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddUpdateCategories.Location = new System.Drawing.Point(92, 176);
+            this.buttonAddUpdateCategories.Name = "buttonAddUpdateCategories";
+            this.buttonAddUpdateCategories.Size = new System.Drawing.Size(166, 33);
+            this.buttonAddUpdateCategories.TabIndex = 4;
+            this.buttonAddUpdateCategories.Text = "Add/Update Categories";
+            this.buttonAddUpdateCategories.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxDatabaseTools
+            // 
+            this.groupBoxDatabaseTools.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxDatabaseTools.Controls.Add(this.buttonBackupDatabase);
+            this.groupBoxDatabaseTools.Controls.Add(this.buttonDeleteAndSeedDatabase);
+            this.groupBoxDatabaseTools.Controls.Add(this.buttonRestoreDatabase);
+            this.groupBoxDatabaseTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxDatabaseTools.Location = new System.Drawing.Point(371, 329);
+            this.groupBoxDatabaseTools.Name = "groupBoxDatabaseTools";
+            this.groupBoxDatabaseTools.Size = new System.Drawing.Size(459, 86);
+            this.groupBoxDatabaseTools.TabIndex = 15;
+            this.groupBoxDatabaseTools.TabStop = false;
+            this.groupBoxDatabaseTools.Text = "Database tools";
             // 
             // buttonBackupDatabase
             // 
-            this.buttonBackupDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBackupDatabase.Location = new System.Drawing.Point(582, 616);
+            this.buttonBackupDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBackupDatabase.Location = new System.Drawing.Point(167, 25);
             this.buttonBackupDatabase.Name = "buttonBackupDatabase";
             this.buttonBackupDatabase.Size = new System.Drawing.Size(126, 51);
             this.buttonBackupDatabase.TabIndex = 9;
@@ -192,87 +195,70 @@
             // 
             // buttonDeleteAndSeedDatabase
             // 
-            this.buttonDeleteAndSeedDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteAndSeedDatabase.Location = new System.Drawing.Point(435, 616);
+            this.buttonDeleteAndSeedDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteAndSeedDatabase.Location = new System.Drawing.Point(20, 25);
             this.buttonDeleteAndSeedDatabase.Name = "buttonDeleteAndSeedDatabase";
             this.buttonDeleteAndSeedDatabase.Size = new System.Drawing.Size(126, 51);
             this.buttonDeleteAndSeedDatabase.TabIndex = 8;
             this.buttonDeleteAndSeedDatabase.Text = "Delete and seed database";
             this.buttonDeleteAndSeedDatabase.UseVisualStyleBackColor = true;
             // 
-            // buttonAddUpdateBusinesses
+            // buttonRestoreDatabase
             // 
-            this.buttonAddUpdateBusinesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUpdateBusinesses.Location = new System.Drawing.Point(309, 172);
-            this.buttonAddUpdateBusinesses.Name = "buttonAddUpdateBusinesses";
-            this.buttonAddUpdateBusinesses.Size = new System.Drawing.Size(234, 33);
-            this.buttonAddUpdateBusinesses.TabIndex = 7;
-            this.buttonAddUpdateBusinesses.Text = "Add/Update Businesses";
-            this.buttonAddUpdateBusinesses.UseVisualStyleBackColor = true;
+            this.buttonRestoreDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestoreDatabase.Location = new System.Drawing.Point(313, 25);
+            this.buttonRestoreDatabase.Name = "buttonRestoreDatabase";
+            this.buttonRestoreDatabase.Size = new System.Drawing.Size(126, 51);
+            this.buttonRestoreDatabase.TabIndex = 13;
+            this.buttonRestoreDatabase.Text = "Restore database";
+            this.buttonRestoreDatabase.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewBackupDatabases
+            // groupBoxBusinesses
             // 
-            this.dataGridViewBackupDatabases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBackupDatabases.Location = new System.Drawing.Point(30, 274);
-            this.dataGridViewBackupDatabases.Name = "dataGridViewBackupDatabases";
-            this.dataGridViewBackupDatabases.Size = new System.Drawing.Size(447, 138);
-            this.dataGridViewBackupDatabases.TabIndex = 6;
-            // 
-            // labelBackupDatabase
-            // 
-            this.labelBackupDatabase.AutoSize = true;
-            this.labelBackupDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBackupDatabase.Location = new System.Drawing.Point(577, 574);
-            this.labelBackupDatabase.Name = "labelBackupDatabase";
-            this.labelBackupDatabase.Size = new System.Drawing.Size(131, 20);
-            this.labelBackupDatabase.TabIndex = 5;
-            this.labelBackupDatabase.Text = "Database tools";
-            // 
-            // buttonAddUpdateCategories
-            // 
-            this.buttonAddUpdateCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUpdateCategories.Location = new System.Drawing.Point(119, 616);
-            this.buttonAddUpdateCategories.Name = "buttonAddUpdateCategories";
-            this.buttonAddUpdateCategories.Size = new System.Drawing.Size(115, 51);
-            this.buttonAddUpdateCategories.TabIndex = 4;
-            this.buttonAddUpdateCategories.Text = "Add/Update Categories";
-            this.buttonAddUpdateCategories.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewCategories
-            // 
-            this.dataGridViewCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCategories.Location = new System.Drawing.Point(30, 484);
-            this.dataGridViewCategories.Name = "dataGridViewCategories";
-            this.dataGridViewCategories.Size = new System.Drawing.Size(293, 126);
-            this.dataGridViewCategories.TabIndex = 3;
-            // 
-            // labelCategories
-            // 
-            this.labelCategories.AutoSize = true;
-            this.labelCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCategories.Location = new System.Drawing.Point(126, 461);
-            this.labelCategories.Name = "labelCategories";
-            this.labelCategories.Size = new System.Drawing.Size(96, 20);
-            this.labelCategories.TabIndex = 2;
-            this.labelCategories.Text = "Categories";
+            this.groupBoxBusinesses.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxBusinesses.Controls.Add(this.dataGridViewBussinessName);
+            this.groupBoxBusinesses.Controls.Add(this.buttonAddUpdateBusinesses);
+            this.groupBoxBusinesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxBusinesses.Location = new System.Drawing.Point(20, 18);
+            this.groupBoxBusinesses.Name = "groupBoxBusinesses";
+            this.groupBoxBusinesses.Size = new System.Drawing.Size(810, 305);
+            this.groupBoxBusinesses.TabIndex = 14;
+            this.groupBoxBusinesses.TabStop = false;
+            this.groupBoxBusinesses.Text = "Businesses";
             // 
             // dataGridViewBussinessName
             // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBussinessName.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewBussinessName.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBussinessName.Location = new System.Drawing.Point(29, 38);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBussinessName.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewBussinessName.Location = new System.Drawing.Point(9, 25);
             this.dataGridViewBussinessName.Name = "dataGridViewBussinessName";
-            this.dataGridViewBussinessName.Size = new System.Drawing.Size(807, 128);
+            this.dataGridViewBussinessName.Size = new System.Drawing.Size(795, 235);
             this.dataGridViewBussinessName.TabIndex = 1;
             // 
-            // labelBusinesses
+            // buttonAddUpdateBusinesses
             // 
-            this.labelBusinesses.AutoSize = true;
-            this.labelBusinesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBusinesses.Location = new System.Drawing.Point(26, 13);
-            this.labelBusinesses.Name = "labelBusinesses";
-            this.labelBusinesses.Size = new System.Drawing.Size(101, 20);
-            this.labelBusinesses.TabIndex = 0;
-            this.labelBusinesses.Text = "Businesses";
+            this.buttonAddUpdateBusinesses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddUpdateBusinesses.Location = new System.Drawing.Point(298, 266);
+            this.buttonAddUpdateBusinesses.Name = "buttonAddUpdateBusinesses";
+            this.buttonAddUpdateBusinesses.Size = new System.Drawing.Size(221, 33);
+            this.buttonAddUpdateBusinesses.TabIndex = 7;
+            this.buttonAddUpdateBusinesses.Text = "Add/Update Businesses";
+            this.buttonAddUpdateBusinesses.UseVisualStyleBackColor = true;
             // 
             // tabPageBusiness
             // 
@@ -280,24 +266,20 @@
             this.tabPageBusiness.Controls.Add(this.labelInstructions);
             this.tabPageBusiness.Controls.Add(this.labelBusinessSelected);
             this.tabPageBusiness.Controls.Add(this.comboBoxBusinessSelected);
-            this.tabPageBusiness.Controls.Add(this.buttonPurchase);
-            this.tabPageBusiness.Controls.Add(this.dataGridViewPastOrder);
-            this.tabPageBusiness.Controls.Add(this.labelPastOrder);
-            this.tabPageBusiness.Controls.Add(this.dataGridViewOrder);
-            this.tabPageBusiness.Controls.Add(this.labelOrder);
-            this.tabPageBusiness.Controls.Add(this.dataGridViewOtherProduct);
-            this.tabPageBusiness.Controls.Add(this.labelOtherProduct);
             this.tabPageBusiness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageBusiness.Location = new System.Drawing.Point(4, 29);
             this.tabPageBusiness.Name = "tabPageBusiness";
             this.tabPageBusiness.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBusiness.Size = new System.Drawing.Size(847, 751);
+            this.tabPageBusiness.Size = new System.Drawing.Size(847, 564);
             this.tabPageBusiness.TabIndex = 1;
             this.tabPageBusiness.Text = "Business";
             this.tabPageBusiness.UseVisualStyleBackColor = true;
             // 
             // groupBoxBusinessData
             // 
+            this.groupBoxBusinessData.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxBusinessData.Controls.Add(this.buttonOrders);
+            this.groupBoxBusinessData.Controls.Add(this.buttonShop);
             this.groupBoxBusinessData.Controls.Add(this.labelBusinessAddress);
             this.groupBoxBusinessData.Controls.Add(this.labelBusinessAddressData);
             this.groupBoxBusinessData.Controls.Add(this.labelBusinessEmail);
@@ -306,12 +288,32 @@
             this.groupBoxBusinessData.Controls.Add(this.buttonAddUpdateProduct);
             this.groupBoxBusinessData.Controls.Add(this.dataGridViewBusinessProduct);
             this.groupBoxBusinessData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxBusinessData.Location = new System.Drawing.Point(19, 59);
+            this.groupBoxBusinessData.Location = new System.Drawing.Point(18, 53);
             this.groupBoxBusinessData.Name = "groupBoxBusinessData";
-            this.groupBoxBusinessData.Size = new System.Drawing.Size(810, 282);
+            this.groupBoxBusinessData.Size = new System.Drawing.Size(810, 496);
             this.groupBoxBusinessData.TabIndex = 17;
             this.groupBoxBusinessData.TabStop = false;
             this.groupBoxBusinessData.Text = "BusinessName";
+            // 
+            // buttonOrders
+            // 
+            this.buttonOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrders.Location = new System.Drawing.Point(265, 454);
+            this.buttonOrders.Name = "buttonOrders";
+            this.buttonOrders.Size = new System.Drawing.Size(130, 31);
+            this.buttonOrders.TabIndex = 20;
+            this.buttonOrders.Text = "Orders";
+            this.buttonOrders.UseVisualStyleBackColor = true;
+            // 
+            // buttonShop
+            // 
+            this.buttonShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShop.Location = new System.Drawing.Point(415, 454);
+            this.buttonShop.Name = "buttonShop";
+            this.buttonShop.Size = new System.Drawing.Size(130, 31);
+            this.buttonShop.TabIndex = 19;
+            this.buttonShop.Text = "Shop";
+            this.buttonShop.UseVisualStyleBackColor = true;
             // 
             // labelBusinessAddress
             // 
@@ -353,6 +355,52 @@
             this.labelBusinessEmailData.TabIndex = 16;
             this.labelBusinessEmailData.Text = "test";
             // 
+            // labelBusinessProduct
+            // 
+            this.labelBusinessProduct.AutoSize = true;
+            this.labelBusinessProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBusinessProduct.Location = new System.Drawing.Point(6, 82);
+            this.labelBusinessProduct.Name = "labelBusinessProduct";
+            this.labelBusinessProduct.Size = new System.Drawing.Size(69, 16);
+            this.labelBusinessProduct.TabIndex = 0;
+            this.labelBusinessProduct.Text = "Products";
+            // 
+            // buttonAddUpdateProduct
+            // 
+            this.buttonAddUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddUpdateProduct.Location = new System.Drawing.Point(307, 408);
+            this.buttonAddUpdateProduct.Name = "buttonAddUpdateProduct";
+            this.buttonAddUpdateProduct.Size = new System.Drawing.Size(199, 31);
+            this.buttonAddUpdateProduct.TabIndex = 8;
+            this.buttonAddUpdateProduct.Text = "Add/Update products";
+            this.buttonAddUpdateProduct.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewBusinessProduct
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBusinessProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewBusinessProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewBusinessProduct.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewBusinessProduct.Location = new System.Drawing.Point(9, 101);
+            this.dataGridViewBusinessProduct.Name = "dataGridViewBusinessProduct";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewBusinessProduct.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewBusinessProduct.Size = new System.Drawing.Size(793, 301);
+            this.dataGridViewBusinessProduct.TabIndex = 1;
+            // 
             // labelInstructions
             // 
             this.labelInstructions.AutoSize = true;
@@ -381,131 +429,26 @@
             this.comboBoxBusinessSelected.Size = new System.Drawing.Size(152, 21);
             this.comboBoxBusinessSelected.TabIndex = 10;
             // 
-            // buttonPurchase
-            // 
-            this.buttonPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPurchase.Location = new System.Drawing.Point(333, 507);
-            this.buttonPurchase.Name = "buttonPurchase";
-            this.buttonPurchase.Size = new System.Drawing.Size(167, 31);
-            this.buttonPurchase.TabIndex = 9;
-            this.buttonPurchase.Text = "Purchase";
-            this.buttonPurchase.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddUpdateProduct
-            // 
-            this.buttonAddUpdateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUpdateProduct.Location = new System.Drawing.Point(296, 232);
-            this.buttonAddUpdateProduct.Name = "buttonAddUpdateProduct";
-            this.buttonAddUpdateProduct.Size = new System.Drawing.Size(199, 31);
-            this.buttonAddUpdateProduct.TabIndex = 8;
-            this.buttonAddUpdateProduct.Text = "Add/Update products";
-            this.buttonAddUpdateProduct.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewPastOrder
-            // 
-            this.dataGridViewPastOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPastOrder.Location = new System.Drawing.Point(458, 605);
-            this.dataGridViewPastOrder.Name = "dataGridViewPastOrder";
-            this.dataGridViewPastOrder.Size = new System.Drawing.Size(371, 124);
-            this.dataGridViewPastOrder.TabIndex = 7;
-            // 
-            // labelPastOrder
-            // 
-            this.labelPastOrder.AutoSize = true;
-            this.labelPastOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPastOrder.Location = new System.Drawing.Point(454, 561);
-            this.labelPastOrder.Name = "labelPastOrder";
-            this.labelPastOrder.Size = new System.Drawing.Size(95, 20);
-            this.labelPastOrder.TabIndex = 6;
-            this.labelPastOrder.Text = "Past Order";
-            // 
-            // dataGridViewOrder
-            // 
-            this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(9, 605);
-            this.dataGridViewOrder.Name = "dataGridViewOrder";
-            this.dataGridViewOrder.Size = new System.Drawing.Size(372, 124);
-            this.dataGridViewOrder.TabIndex = 5;
-            // 
-            // labelOrder
-            // 
-            this.labelOrder.AutoSize = true;
-            this.labelOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrder.Location = new System.Drawing.Point(9, 561);
-            this.labelOrder.Name = "labelOrder";
-            this.labelOrder.Size = new System.Drawing.Size(54, 20);
-            this.labelOrder.TabIndex = 4;
-            this.labelOrder.Text = "Order";
-            // 
-            // dataGridViewOtherProduct
-            // 
-            this.dataGridViewOtherProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOtherProduct.Location = new System.Drawing.Point(19, 379);
-            this.dataGridViewOtherProduct.Name = "dataGridViewOtherProduct";
-            this.dataGridViewOtherProduct.Size = new System.Drawing.Size(802, 122);
-            this.dataGridViewOtherProduct.TabIndex = 3;
-            // 
-            // labelOtherProduct
-            // 
-            this.labelOtherProduct.AutoSize = true;
-            this.labelOtherProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOtherProduct.Location = new System.Drawing.Point(15, 356);
-            this.labelOtherProduct.Name = "labelOtherProduct";
-            this.labelOtherProduct.Size = new System.Drawing.Size(71, 20);
-            this.labelOtherProduct.TabIndex = 2;
-            this.labelOtherProduct.Text = "Product";
-            // 
-            // dataGridViewBusinessProduct
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBusinessProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewBusinessProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBusinessProduct.Location = new System.Drawing.Point(9, 101);
-            this.dataGridViewBusinessProduct.Name = "dataGridViewBusinessProduct";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewBusinessProduct.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridViewBusinessProduct.Size = new System.Drawing.Size(793, 125);
-            this.dataGridViewBusinessProduct.TabIndex = 1;
-            // 
-            // labelBusinessProduct
-            // 
-            this.labelBusinessProduct.AutoSize = true;
-            this.labelBusinessProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBusinessProduct.Location = new System.Drawing.Point(6, 82);
-            this.labelBusinessProduct.Name = "labelBusinessProduct";
-            this.labelBusinessProduct.Size = new System.Drawing.Size(69, 16);
-            this.labelBusinessProduct.TabIndex = 0;
-            this.labelBusinessProduct.Text = "Products";
-            // 
             // ProjectTeam06BusinessMarketplaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 805);
+            this.ClientSize = new System.Drawing.Size(875, 616);
             this.Controls.Add(this.tabControl);
             this.Name = "ProjectTeam06BusinessMarketplaceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Business Marketplace";
             this.tabControl.ResumeLayout(false);
             this.tabPageAdmin.ResumeLayout(false);
-            this.tabPageAdmin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBackupDatabases)).EndInit();
+            this.groupBoxCategories.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).EndInit();
+            this.groupBoxDatabaseTools.ResumeLayout(false);
+            this.groupBoxBusinesses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBussinessName)).EndInit();
             this.tabPageBusiness.ResumeLayout(false);
             this.tabPageBusiness.PerformLayout();
             this.groupBoxBusinessData.ResumeLayout(false);
             this.groupBoxBusinessData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPastOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOtherProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBusinessProduct)).EndInit();
             this.ResumeLayout(false);
 
@@ -516,29 +459,15 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageAdmin;
         private System.Windows.Forms.TabPage tabPageBusiness;
-        private System.Windows.Forms.Label labelBusinesses;
         private System.Windows.Forms.DataGridView dataGridViewBussinessName;
-        private System.Windows.Forms.Label labelCategories;
         private System.Windows.Forms.DataGridView dataGridViewCategories;
         private System.Windows.Forms.Label labelBusinessProduct;
-        private System.Windows.Forms.Label labelOtherProduct;
         private System.Windows.Forms.DataGridView dataGridViewBusinessProduct;
         private System.Windows.Forms.Button buttonAddUpdateCategories;
-        private System.Windows.Forms.DataGridView dataGridViewOtherProduct;
-        private System.Windows.Forms.Label labelBackupDatabase;
-        private System.Windows.Forms.DataGridView dataGridViewBackupDatabases;
-        private System.Windows.Forms.Label labelOrder;
-        private System.Windows.Forms.DataGridView dataGridViewOrder;
-        private System.Windows.Forms.DataGridView dataGridViewPastOrder;
-        private System.Windows.Forms.Label labelPastOrder;
         private System.Windows.Forms.Button buttonAddUpdateProduct;
-        private System.Windows.Forms.Button buttonPurchase;
         private System.Windows.Forms.Button buttonBackupDatabase;
         private System.Windows.Forms.Button buttonDeleteAndSeedDatabase;
         private System.Windows.Forms.Button buttonAddUpdateBusinesses;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label labelProductsSold;
-        private System.Windows.Forms.Label labelOrdersSold;
         private System.Windows.Forms.Button buttonRestoreDatabase;
         private System.Windows.Forms.Label labelBusinessSelected;
         private System.Windows.Forms.ComboBox comboBoxBusinessSelected;
@@ -548,6 +477,12 @@
         private System.Windows.Forms.Label labelBusinessAddressData;
         private System.Windows.Forms.Label labelBusinessEmail;
         private System.Windows.Forms.Label labelBusinessEmailData;
+        private System.Windows.Forms.GroupBox groupBoxBusinesses;
+        private System.Windows.Forms.GroupBox groupBoxCategories;
+        private System.Windows.Forms.GroupBox groupBoxDatabaseTools;
+        private System.Windows.Forms.Button buttonReportsAdmin;
+        private System.Windows.Forms.Button buttonOrders;
+        private System.Windows.Forms.Button buttonShop;
     }
 }
 

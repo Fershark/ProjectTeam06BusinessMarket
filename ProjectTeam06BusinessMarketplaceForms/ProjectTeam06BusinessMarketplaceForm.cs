@@ -28,9 +28,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             this.Load += ProjectTeam06BusinessMarketplaceForm_Load;
 
-            this.FormClosed += (s, e) => context.Dispose();           
+            this.FormClosed += (s, e) => context.Dispose();
         }
-        
+
         private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
         {
             LoadEntities();

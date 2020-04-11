@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessMarketplaceEntitiesNS
 {
-    public class BusinessMarketplaceEntitiesContext: DbContext
+    public class BusinessMarketplaceEntitiesContext : DbContext
     {
 
-        public BusinessMarketplaceEntitiesContext(): base("name=BusinessMarketplaceConnection")
+        public BusinessMarketplaceEntitiesContext() : base("name=BusinessMarketplaceConnection")
         {
         }
 

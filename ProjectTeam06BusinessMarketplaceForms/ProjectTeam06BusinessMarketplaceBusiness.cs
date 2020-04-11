@@ -20,8 +20,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
         private void InitBusinessComponents()
         {
             comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
-           
-            InitalizeDataGridView(dataGridViewOrder, context.Orders.Local.ToBindingList());
 
             buttonAddUpdateProduct.Click += ButtonAddUpdateProduct_Click;
             comboBoxBusinessSelected.SelectedIndexChanged += ComboBoxBusinessSelected_SelectedIndexChanged;

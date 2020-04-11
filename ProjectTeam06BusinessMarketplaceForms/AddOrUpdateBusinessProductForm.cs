@@ -123,7 +123,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             {
                 message = "Price is required.";
             }
-            else if (!Int32.TryParse(quantityInStockString.Trim(), out quantityInStock)) 
+            else if (!Int32.TryParse(quantityInStockString.Trim(), out quantityInStock))
             {
                 message = "Quanity in stock should be a natural number.";
             }

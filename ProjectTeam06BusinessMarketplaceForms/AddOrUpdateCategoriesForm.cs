@@ -53,7 +53,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
         /// <param name="e"></param>
         private void ButtonAddCategories_Click(object sender, EventArgs e)
         {
-            CleanForm();   
+            CleanForm();
         }
 
         /// <summary>

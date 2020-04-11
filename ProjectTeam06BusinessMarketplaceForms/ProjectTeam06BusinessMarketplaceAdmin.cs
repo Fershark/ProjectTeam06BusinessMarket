@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectTeam06BusinessMarketplaceForms
-{ 
+{
     public partial class ProjectTeam06BusinessMarketplaceForm
     {
         private void InitAdminComponents()
@@ -81,6 +81,10 @@ namespace ProjectTeam06BusinessMarketplaceForms
             orders[0].Products.Add(products[0]);
             context.Orders.AddRange(orders);
             context.SaveChanges();
+
+            //For Business correct load in business tab
+            comboBoxBusinessSelected.DataSource = null;
+            comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
 
             MessageBox.Show("Database seeded correctly.");
         }
@@ -160,6 +164,10 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 }
                 businessMarketplaceDataAccessLayer.CloseConnection();
                 LoadEntities();
+
+                //For Business correct load in business tab
+                comboBoxBusinessSelected.DataSource = null;
+                comboBoxBusinessSelected.DataSource = context.Businesses.Local.ToBindingList();
 
                 if (result)
                 {

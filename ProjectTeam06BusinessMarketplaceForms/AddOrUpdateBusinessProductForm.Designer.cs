@@ -52,7 +52,7 @@
             this.listBoxProduct.FormattingEnabled = true;
             this.listBoxProduct.Location = new System.Drawing.Point(36, 12);
             this.listBoxProduct.Name = "listBoxProduct";
-            this.listBoxProduct.Size = new System.Drawing.Size(291, 82);
+            this.listBoxProduct.Size = new System.Drawing.Size(291, 108);
             this.listBoxProduct.TabIndex = 0;
             // 
             // labelProductIdNumber
@@ -149,7 +149,7 @@
             // buttonAddProduct
             // 
             this.buttonAddProduct.CausesValidation = false;
-            this.buttonAddProduct.Location = new System.Drawing.Point(140, 100);
+            this.buttonAddProduct.Location = new System.Drawing.Point(140, 126);
             this.buttonAddProduct.Name = "buttonAddProduct";
             this.buttonAddProduct.Size = new System.Drawing.Size(75, 23);
             this.buttonAddProduct.TabIndex = 15;

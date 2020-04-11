@@ -80,7 +80,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             checkBoxIsAdmin.Checked = business.IsAdmin.Equals(true);
         }
 
-      
+
         private void ButtonSubmit_Click(object sender, EventArgs e)
         {
             string name = textBoxBusinessName.Text;
@@ -92,15 +92,18 @@ namespace ProjectTeam06BusinessMarketplaceForms
             {
                 message = "Name is required.";
 
-            } else if (address.Trim().Length == 0)
+            }
+            else if (address.Trim().Length == 0)
             {
                 message = "Address is required.";
 
-            } else if (email.Trim().Length == 0)
+            }
+            else if (email.Trim().Length == 0)
             {
                 message = "Email is required.";
 
-            } else
+            }
+            else
             {
                 business.Name = name;
                 business.Address = address;

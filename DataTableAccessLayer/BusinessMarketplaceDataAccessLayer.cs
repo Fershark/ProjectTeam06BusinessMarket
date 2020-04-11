@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataTableAccessLayer
 {
-    public class BusinessMarketplaceDataAccessLayer: SqlDataTableAccessLayer
+    public class BusinessMarketplaceDataAccessLayer : SqlDataTableAccessLayer
     {
         /// <summary>
         /// static method for initializing the data set and adding the tables
