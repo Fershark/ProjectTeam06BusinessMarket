@@ -61,7 +61,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.SaveChanges();
         }
 
-        private void InitalizeDataGridView<T>(DataGridView dataGridView,BindingList<T> bindingList,params string[] columnsToIgnore)
+        private void InitalizeDataGridView(DataGridView dataGridView, object bindingList, params string[] columnsToIgnore)
         {
             dataGridView.DataSource = bindingList;
             dataGridView.ReadOnly = true;

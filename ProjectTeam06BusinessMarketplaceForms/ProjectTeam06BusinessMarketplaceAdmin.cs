@@ -17,8 +17,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
     {
         private void InitAdminComponents()
         {
-            InitalizeDataGridView<Business>(dataGridViewBussinessName, context.Businesses.Local.ToBindingList(), "Orders", "Products");
-            InitalizeDataGridView<Category>(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
+            InitalizeDataGridView(dataGridViewBussinessName, context.Businesses.Local.ToBindingList(), "Orders", "Products");
+            InitalizeDataGridView(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
 
             buttonAddUpdateBusinesses.Click += ButtonAddUpdateBusinessName_Click;
             buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
