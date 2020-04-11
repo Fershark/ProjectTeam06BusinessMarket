@@ -51,11 +51,11 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             List<Category> categories = new List<Category>()
             {
-                new Category {Name = "Machinery", Description = "Description"},
-                new Category {Name = "Electronics", Description = "Description"},
-                new Category {Name = "Vehicles", Description = "Description"},
-                new Category {Name = "Textiles", Description = "Description"},
-                new Category {Name = "Furniture", Description = "Description"},
+                new Category {Name = "Machinery", Description = "Factory machines or factory machine parts"},
+                new Category {Name = "Electronics", Description = "Circuits or electronic components"},
+                new Category {Name = "Vehicles", Description = "Vehicles or vehicle parts"},
+                new Category {Name = "Textiles", Description = "Cloths or machines to make cloths"},
+                new Category {Name = "Furniture", Description = "Business or factories movable articles"},
             };
             context.Categories.AddRange(categories);
             context.SaveChanges();
@@ -63,25 +63,40 @@ namespace ProjectTeam06BusinessMarketplaceForms
             List<Business> businesses = new List<Business>()
             {
                 new Business {Name = "Admin", Address = "Admin", Email = "admin@businessmarketplace.com", IsAdmin = true},
-                new Business {Name = "SUSUMO MACHINEY COMPANY LIMITED", Address = "1560 Booth Ave, Coquitlam,BC", Email = "contact@suzumo.com", IsAdmin = false},
-                new Business {Name = "MVP Electronics", Address = "807 Carnarvon St, New Westminster, BC", Email = "contact@mvpelectronics.com", IsAdmin = false}
+                new Business {Name = "KRONES Machinery Co. Limited", Address = "108-6285 Northam Dr, Mississauga, ON, L4V 1X5, Canada", Email = "info@krones.ca", IsAdmin = false},
+                new Business {Name = "Ecolab Canada", Address = "5105 Tomken Road, Mississauga, ON, Canada L4W 2X5", Email = "info@ecolab.com", IsAdmin = false},
+                new Business {Name = "Cintas Canada", Address = "6741 Cariboo Road Unit 307Burnaby, BC V3N 4A3", Email = "info@cintas.ca", IsAdmin = false},
+                new Business {Name = "Traffic Tech Canada", Address = "1J9, 200-4595 Canada Way, Burnaby, BC V5G 4L6", Email = "info@traffictech.ca", IsAdmin = false},
             };
             context.Businesses.AddRange(businesses);
             context.SaveChanges();
 
+            Dictionary<string, Category> categoriesDictionary = categories.ToDictionary(x => x.Name, x => x);
+            Dictionary<string, Business> businessesDictionary = businesses.ToDictionary(x => x.Name, x => x);
             List<Product> products = new List<Product>()
             {
-                new Product {Name = "Continuous Sushi Roll Machine", Description = "Creates delicious Norimaki with a fluffly rice sheet", QuantityInStock = 10, Price = (decimal) 1001, Category = categories[0], Business = businesses[1] }
-
+                new Product {Name = "VarioStore tank", Description = "Maximised product safety and product quality", QuantityInStock = 10, Price = (decimal) 100000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["KRONES Machinery Co. Limited"] },
+                new Product {Name = "Krones FlexiFruit", Description = "Filling with the twin-flow method. Treats juice and fruit pieces separately", QuantityInStock = 10, Price = (decimal) 1200000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["KRONES Machinery Co. Limited"] },
+                new Product {Name = "Krones VarioFlash J", Description = "Thermal product treatment for the best juice quality", QuantityInStock = 10, Price = (decimal) 1100000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["KRONES Machinery Co. Limited"] },
+                new Product {Name = "Steinecker CombiCube", Description = "Modular brewing systems can be perfectly configured to meet the needs of craft brewers", QuantityInStock = 10, Price = (decimal) 2500000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["KRONES Machinery Co. Limited"] },
+                new Product {Name = "Krones Cantronic", Description = "Quality control for beverage cans", QuantityInStock = 10, Price = (decimal) 1200000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["KRONES Machinery Co. Limited"] },
+                new Product {Name = "HVAC AIR FILTRATION(Monthly)", Description = "Monitoring Filter Life and Performance", QuantityInStock = 10, Price = (decimal) 5000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["Ecolab Canada"] },
+                new Product {Name = "RO EQUIPMENT AND SOLUTIONS(Monthly)", Description = "Reverse Osmosis Components and Systems", QuantityInStock = 10, Price = (decimal) 3000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["Ecolab Canada"] },
+                new Product {Name = "BOILER WATER TREATMENT(Monthly)", Description = "Comprehensive boiler water treatment solution mitigating scale and corrosion of the boiler system", QuantityInStock = 10, Price = (decimal) 1000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["Ecolab Canada"] },
+                new Product {Name = "AUTOMATION, MONITORING & CONTROL(Monthly)", Description = "Monitoring and control solutions will help you leverage technology to improve reliability, cost - effectiveness and help you meet your business goals", QuantityInStock = 10, Price = (decimal) 2000, Category = categoriesDictionary["Machinery"], Business = businessesDictionary["Ecolab Canada"] },
+                new Product {Name = "Carhartt® workwear(200 sets)", Description = "Ultimate clothing for these conditions", QuantityInStock = 10, Price = (decimal) 100000, Category = categoriesDictionary["Textiles"], Business = businessesDictionary["Cintas Canada"] },
+                new Product {Name = "Ready for the Workday® (200 sets)", Description = "UTILITY UNIFORMS", QuantityInStock = 10, Price = (decimal) 70000, Category = categoriesDictionary["Textiles"], Business = businessesDictionary["Cintas Canada"] },
+                new Product {Name = "AUTOMOTIVE & MECHANIC UNIFORMS(200 sets)", Description = "Our extensive product line provides the right uniform for employees", QuantityInStock = 10, Price = (decimal) 80000, Category = categoriesDictionary["Textiles"], Business = businessesDictionary["Cintas Canada"] }
             };
             context.Products.AddRange(products);
             context.SaveChanges();
 
             List<Order> orders = new List<Order>()
             {
-                new Order {OrderDate = DateTime.Now, TotalPrice = 2002, Business = businesses[2]}
+                new Order {OrderDate = DateTime.Now, TotalPrice = 75000, Business = businessesDictionary["KRONES Machinery Co. Limited"]}
             };
-            orders[0].Products.Add(products[0]);
+            orders[0].Products.Add(products[5]);
+            orders[0].Products.Add(products[10]);
             context.Orders.AddRange(orders);
             context.SaveChanges();
 

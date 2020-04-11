@@ -27,7 +27,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
             //Select the first business in the Database to simulate that business is the one signed in
             //The index is changed twice to trigger the event
             comboBoxBusinessSelected.SelectedIndex = -1;
-            comboBoxBusinessSelected.SelectedIndex = 0;
+            if (context.Businesses.Local.Count() > 0)
+                comboBoxBusinessSelected.SelectedIndex = 0;
         }
 
         private void SetBusinessComboBox()
@@ -60,9 +61,16 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
         {
-            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(context, businessSigned);
-            addOrUpdateBusinessProductForm.ShowDialog();
-            dataGridViewBusinessProduct.Refresh();
+            if (businessSigned == null)
+            {
+                MessageBox.Show("A business should be selected.");
+            }
+            else
+            {
+                AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(context, businessSigned);
+                addOrUpdateBusinessProductForm.ShowDialog();
+                dataGridViewBusinessProduct.Refresh();
+            }
         }
     }
 }

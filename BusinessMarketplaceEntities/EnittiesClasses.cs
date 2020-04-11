@@ -71,7 +71,7 @@ namespace BusinessMarketplaceEntitiesNS
         public string Name { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(250)]
         [DisplayName("Description")]
         public string Description { get; set; }
 
