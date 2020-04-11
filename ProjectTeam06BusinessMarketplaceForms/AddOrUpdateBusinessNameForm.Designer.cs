@@ -49,7 +49,6 @@
             this.listBoxBusinessName.Name = "listBoxBusinessName";
             this.listBoxBusinessName.Size = new System.Drawing.Size(277, 134);
             this.listBoxBusinessName.TabIndex = 0;
-            this.listBoxBusinessName.SelectedIndexChanged += new System.EventHandler(this.listBoxName_SelectedIndexChanged);
             // 
             // labelBusinessName
             // 
@@ -163,6 +162,7 @@
             this.Controls.Add(this.labelBusinessName);
             this.Controls.Add(this.listBoxBusinessName);
             this.Name = "AddOrUpdateBusinessNameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add or Update Business Form";
             this.ResumeLayout(false);
             this.PerformLayout();

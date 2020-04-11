@@ -18,18 +18,18 @@ namespace ProjectTeam06BusinessMarketplaceForms
     {
         private BusinessMarketplaceEntitiesContext context;
         private Business business;
+
         public AddOrUpdateBusinessNameForm(BusinessMarketplaceEntitiesContext context)
         {
             InitializeComponent();
 
             this.context = context;
+         
             Load += AddOrUpdateBusinessNameForm_Load;
 
             buttonAddBusinessName.Click += ButtonAddBusinessName_Click;
             listBoxBusinessName.SelectedIndexChanged += ListBoxBusinessName_SelectedIndexChanged;
             buttonSubmitBusinessName.Click += ButtonSubmit_Click;
-
-
         }
 
         private void ListBoxBusinessName_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,7 +43,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
         private void ButtonAddBusinessName_Click(object sender, EventArgs e)
         {
             CleanForm();
-
         }
 
         private void AddOrUpdateBusinessNameForm_Load(object sender, EventArgs e)
@@ -55,7 +54,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
         private void ReloadListBoxData()
         {
             context.SaveChanges();
-            context.Categories.Load();
+            context.Businesses.Load();
 
             // We force the refresh of the listbox since without reassigning the data source
             // the listBox data doesn't change
@@ -70,7 +69,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
             MapBusinessToForm();
         }
 
-
         private void MapBusinessToForm()
         {
             labelBusinessIdNumber.Text = business.Id.ToString();
@@ -79,7 +77,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
             textBoxBusinessEmail.Text = business.Email == null ? "" : business.Email;
             checkBoxIsAdmin.Checked = business.IsAdmin.Equals(true);
         }
-
 
         private void ButtonSubmit_Click(object sender, EventArgs e)
         {
@@ -91,24 +88,23 @@ namespace ProjectTeam06BusinessMarketplaceForms
             if (name.Trim().Length == 0)
             {
                 message = "Name is required.";
-
             }
             else if (address.Trim().Length == 0)
             {
                 message = "Address is required.";
-
             }
             else if (email.Trim().Length == 0)
             {
                 message = "Email is required.";
-
             }
             else
             {
                 business.Name = name;
                 business.Address = address;
                 business.Email = email;
-                //
+                business.IsAdmin = checkBoxIsAdmin.Checked;
+
+                //if id is 0 it means we need to add it
                 if (business.Id == 0)
                 {
                     context.Businesses.Add(business);
@@ -123,14 +119,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 }
             }
             MessageBox.Show(message);
-        }
-
-
-        //mistake for double click on the form
-        //will fix later
-        private void listBoxName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
