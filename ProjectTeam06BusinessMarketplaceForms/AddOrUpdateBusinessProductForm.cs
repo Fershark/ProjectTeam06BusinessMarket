@@ -12,24 +12,28 @@ using System.Windows.Forms;
 using BusinessMarketplaceEntitiesNS;
 
 
-   namespace ProjectTeam06BusinessMarketplaceForms
+namespace ProjectTeam06BusinessMarketplaceForms
+{
+    public partial class AddOrUpdateBusinessProductForm : Form
     {
-        public partial class AddOrUpdateBusinessProductForm : Form
+        private BusinessMarketplaceEntitiesContext context;
+        private Product product;
+        private Business business;
+
+        public AddOrUpdateBusinessProductForm(BusinessMarketplaceEntitiesContext context, Business business)
         {
-            private BusinessMarketplaceEntitiesContext context;
-            private Product product;
+            InitializeComponent();
 
-            public AddOrUpdateBusinessProductForm(BusinessMarketplaceEntitiesContext context)
-            {
-                InitializeComponent();
+            this.context = context;
+            this.business = business;
 
-                this.context = context;
-                Load += AddOrUpdateBusinessProductForm_Load;
+            Load += AddOrUpdateBusinessProductForm_Load;
 
-                buttonAddProduct.Click += ButtonAddProduct_Click;
-                listBoxProduct.SelectedIndexChanged += ListBoxBusinessProduct_SelectedIndexChanged;
-                buttonUpdateProduct.Click += ButtonUpdateProduct_Click;
-            }
+            buttonAddProduct.Click += ButtonAddProduct_Click;
+            listBoxProduct.SelectedIndexChanged += ListBoxBusinessProduct_SelectedIndexChanged;
+            buttonUpdateProduct.Click += ButtonUpdateProduct_Click;
+        }
+
         /// <summary>
         /// Select index of listbox callback.
         /// If the value selected is of business name it maps its values to the form
@@ -37,109 +41,123 @@ using BusinessMarketplaceEntitiesNS;
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ListBoxBusinessProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxProduct.SelectedValue is Product p)
             {
-                if (listBoxProduct.SelectedValue is Product p)
-                {
-                    product = p;
-                    MapProductToForm();
-                }
-            }
-           
-            private void ButtonAddProduct_Click(object sender, EventArgs e)
-            {
-                CleanForm();
-            }
-            private void AddOrUpdateBusinessProductForm_Load(object sender, EventArgs e)
-            {
-                ReloadListBoxData();
-                CleanForm();
-            }
-
-            private void ReloadListBoxData()
-            {
-                context.SaveChanges();
-                context.Businesses.Load();
-
-                // We force the refresh of the listbox since without reassigning the data source
-                // the listBox data doesn't change
-                listBoxProduct.DataSource = null;
-                listBoxProduct.DataSource = context.Products.Local.ToBindingList();
-            }
-
-            private void CleanForm()
-            {
-                listBoxProduct.SelectedIndex = -1;
-                product = new Product();
+                product = p;
                 MapProductToForm();
             }
-            private void MapProductToForm()
+        }
+
+        private void ButtonAddProduct_Click(object sender, EventArgs e)
+        {
+            CleanForm();
+        }
+
+        private void AddOrUpdateBusinessProductForm_Load(object sender, EventArgs e)
+        {
+            labelBusinessNameData.Text = business.Name;
+            comboBoxCategory.DataSource = context.Categories.Local.ToBindingList();
+
+            ReloadListBoxData();
+            CleanForm();
+        }
+
+        private void ReloadListBoxData()
+        {
+            context.SaveChanges();
+            context.Products.Load();
+
+            // We force the refresh of the listbox since without reassigning the data source
+            // the listBox data doesn't change
+            listBoxProduct.DataSource = null;
+            listBoxProduct.DataSource = context.Products.Local.Where(p => p.Business == business).ToArray();
+        }
+
+        private void CleanForm()
+        {
+            listBoxProduct.SelectedIndex = -1;
+            product = new Product();
+            product.Business = business;
+            MapProductToForm();
+        }
+
+        private void MapProductToForm()
+        {
+            labelProductIdNumber.Text = product.Id.ToString();
+            textBoxProductName.Text = product.Name == null ? "" : product.Name;
+            textBoxProductDescription.Text = product.Description == null ? "" : product.Description;
+            textBoxQuantityInStock.Text = product.QuantityInStock.ToString();
+            textBoxProductPrice.Text = product.Price.ToString();
+
+            if (product.Category == null)
+                comboBoxCategory.SelectedIndex = 0;
+            else
+                comboBoxCategory.SelectedItem = product.Category;
+        }
+
+        private void ButtonUpdateProduct_Click(object sender, EventArgs e)
+        {
+            string name = textBoxProductName.Text;
+            string description = textBoxProductDescription.Text;
+            string quantityInStockString = textBoxQuantityInStock.Text;
+            string priceString = textBoxProductPrice.Text;
+            int quantityInStock = 0;
+            decimal price = 0;
+            Category category = comboBoxCategory.SelectedItem as Category;
+            string message = "";
+
+            if (name.Trim().Length == 0)
             {
-                labelProductIdNumber.Text = product.Id.ToString();
-                textBoxProductName.Text = product.Name == null ? "" : product.Name;
-                textBoxProductDescription.Text = product.Description == null ? "" : product.Description;
-                textBoxQuantityInStock.Text = product.QuantityInStock.ToString();
-                textBoxProductPrice.Text = product.Price.ToString();
-                labelBusinessIdNumber.Text = product.BusinessId.ToString();
-                labelCategoriesIdNumber.Text = product.CategoryId.ToString();
+                message = "Name is required.";
             }
-
-
-            private void ButtonUpdateProduct_Click(object sender, EventArgs e)
+            else if (description.Trim().Length == 0)
             {
-                string name = textBoxProductName.Text;
-                string description = textBoxProductDescription.Text;
-                string quantityInStock = textBoxQuantityInStock.Text;
-                string price = textBoxProductPrice.Text;
-                string message = "";
-           
+                message = "Desctiption is required";
+            }
+            else if (quantityInStockString.Trim().Length == 0)
+            {
+                message = "Quantity In Stock is required.";
+            }
+            else if (priceString.Trim().Length == 0)
+            {
+                message = "Price is required.";
+            }
+            else if (!Int32.TryParse(quantityInStockString.Trim(), out quantityInStock)) 
+            {
+                message = "Quanity in stock should be a natural number.";
+            }
+            else if (!Decimal.TryParse(priceString.Trim(), out price))
+            {
+                message = "Price should be a decimal number.";
+            }
+            else
+            {
+                product.Name = name;
+                product.Description = description;
+                product.QuantityInStock = quantityInStock;
+                product.Price = price;
+                product.Category = category;
 
-
-                if (name.Trim().Length == 0)
+                //if id is 0 it means we need to add it
+                if (product.Id == 0)
                 {
-                    message = "Name is reuired.";
-                }
-                else if (description.Trim().Length == 0)
-                {
-                    message = "Desctiption is required";
-                }
-                else if (quantityInStock.Trim().Length == 0)
-                {
-                    message = "Quantity In Stock is required.";
-                }
-                else if (price.Trim().Length == 0)
-                {
-                    message = "Price is required.";
+                    context.Products.Add(product);
+                    ReloadListBoxData();
+                    listBoxProduct.SelectedIndex = context.Products.Count() - 1;
+                    message = "Product added successfully.";
                 }
                 else
                 {
-
-                    product.Name = name;
-                    product.Description = description;
-                    //if id is 0 it means we need to add id 
-                    if (product.Id == 0)
-                    {
-                        context.Products.Add(product);
-                        ReloadListBoxData();
-                        listBoxProduct.SelectedIndex = context.Businesses.Count() - 1;
-                        message = "Product added successfully.";
-                    }
-                    else
-                    {
-                        ReloadListBoxData();
-                        message = "Product updated seccessfully";
-                    }
+                    var selectedIndex = listBoxProduct.SelectedIndex;
+                    ReloadListBoxData();
+                    listBoxProduct.SelectedIndex = selectedIndex;
+                    message = "Product updated successfully.";
                 }
-                MessageBox.Show(message);
-
-
             }
-
-        //mistake
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            MessageBox.Show(message);
         }
     }
-    }
+}
 
 

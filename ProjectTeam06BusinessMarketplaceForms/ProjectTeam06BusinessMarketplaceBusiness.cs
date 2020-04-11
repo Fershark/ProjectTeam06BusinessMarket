@@ -54,9 +54,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ButtonAddUpdateProduct_Click(object sender, EventArgs e)
         {
-            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(context);
+            AddOrUpdateBusinessProductForm addOrUpdateBusinessProductForm = new AddOrUpdateBusinessProductForm(context, businessSigned);
             addOrUpdateBusinessProductForm.ShowDialog();
-            //ShowBusinessSigned();
             dataGridViewBusinessProduct.Refresh();
         }
     }
