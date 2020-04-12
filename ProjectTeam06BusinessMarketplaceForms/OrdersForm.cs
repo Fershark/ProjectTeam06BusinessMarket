@@ -16,7 +16,6 @@ namespace ProjectTeam06BusinessMarketplaceForms
     {
         private BusinessMarketplaceEntitiesContext context;
         private Business business;
-        private Order order;
 
         public Orders(BusinessMarketplaceEntitiesContext context, Business business)
         {
@@ -64,6 +63,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             }
 
             dataGridViewOrderProducts.DataSource = null;
+            labelProductsCountData.Text = "0";
         }
     }
 }

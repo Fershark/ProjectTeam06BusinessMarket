@@ -22,11 +22,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             buttonAddUpdateBusinesses.Click += ButtonAddUpdateBusinessName_Click;
             buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
+            buttonSalesAdmin.Click += ButtonSalesAdmin_Click;
             buttonDeleteAndSeedDatabase.Click += ButtonDeleteAndSeedDatabase_Click;
             buttonBackupDatabase.Click += ButtonBackupDatabase_Click;
             buttonRestoreDatabase.Click += ButtonRestoreDatabase_Click;
         }
-
+       
         private void ButtonAddUpdateBusinessName_Click(object sender, EventArgs e)
         {
             AddOrUpdateBusinessNameForm addOrUpdateBusinessNameForm = new AddOrUpdateBusinessNameForm(context);
@@ -42,6 +43,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
             AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm(context);
             addOrUpdateDepartmentForm.ShowDialog();
             dataGridViewCategories.Refresh();
+        }
+
+        private void ButtonSalesAdmin_Click(object sender, EventArgs e)
+        {
+            SalesForm salesForm = new SalesForm(context);
+            salesForm.ShowDialog();
         }
 
         private void ButtonDeleteAndSeedDatabase_Click(object sender, EventArgs e)
