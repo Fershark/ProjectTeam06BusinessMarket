@@ -97,6 +97,43 @@ namespace BusinessMarketplaceEntitiesNS
 
         public virtual ICollection<Order> Orders { get; set; }
 
+        //Used to display the price formatted
+        [NotMapped]
+        [DisplayName("Price")]
+        public string PriceString
+        {
+            get
+            {
+                return Price.ToString("c");
+            }
+        }
+
+        //Used to display only the category name
+        [NotMapped]
+        [DisplayName("Category")]
+        public string CategoryName
+        {
+            get
+            {
+                if (Category != null)
+                    return Category.Name;
+                return "";
+            }
+        }
+
+        //Used to display only the business name
+        [NotMapped]
+        [DisplayName("Business")]
+        public string BusinessName
+        {
+            get
+            {
+                if (Business != null)
+                    return Business.Name;
+                return "";
+            }
+        }
+
         public override string ToString()
         {
             return Id + ": " + Name;
@@ -151,9 +188,32 @@ namespace BusinessMarketplaceEntitiesNS
         [DisplayName("Order Date")]
         public DateTime OrderDate { get; set; }
 
+        //Used to display the order date formatted
+        [NotMapped]
+        [DisplayName("Order Date")]
+        public string OrderDateString
+        {
+            get
+            {
+                return OrderDate.ToString("yyyy-MM-dd HH:mm");
+            }
+        }
+
+
         [Required]
         [DisplayName("Total Price")]
         public decimal TotalPrice { get; set; }
+
+        //Used to display the total price formatted
+        [NotMapped]
+        [DisplayName("Total Price")]
+        public string TotalPriceString
+        {
+            get
+            {
+                return TotalPrice.ToString("c");
+            }
+        }
 
         [Required]
         [DisplayName("Business ID")]
@@ -163,5 +223,38 @@ namespace BusinessMarketplaceEntitiesNS
 
         public virtual ICollection<Product> Products { get; set; }
 
+    }
+
+    /// <summary>
+    /// Class to display the product in the order or in the order details
+    /// </summary>
+    public class ProductInOrder
+    {
+        [DisplayName("Name")]
+        public string Name { get; set; }
+
+        [DisplayName("Category")]
+        public string CategoryName { get; set; }
+
+        [DisplayName("Business")]
+        public string BusinessName { get; set; }
+
+        [DisplayName("Quantity")]
+        public int Quantity { get; set; }
+
+        [DisplayName("Price")]
+        public string Price { get; set; }
+
+        public Product Product { get; set; }
+
+        public ProductInOrder(Product product)
+        {
+            Name = product.Name;
+            BusinessName = product.BusinessName;
+            CategoryName = product.CategoryName;
+            Price = product.PriceString;
+            Quantity = 1;
+            Product = product;
+        }
     }
 }

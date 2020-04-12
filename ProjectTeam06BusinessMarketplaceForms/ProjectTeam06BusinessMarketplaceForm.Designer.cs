@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageAdmin = new System.Windows.Forms.TabPage();
-            this.buttonReportsAdmin = new System.Windows.Forms.Button();
+            this.buttonSalesAdmin = new System.Windows.Forms.Button();
             this.groupBoxCategories = new System.Windows.Forms.GroupBox();
             this.dataGridViewCategories = new System.Windows.Forms.DataGridView();
             this.buttonAddUpdateCategories = new System.Windows.Forms.Button();
@@ -88,7 +82,7 @@
             // 
             // tabPageAdmin
             // 
-            this.tabPageAdmin.Controls.Add(this.buttonReportsAdmin);
+            this.tabPageAdmin.Controls.Add(this.buttonSalesAdmin);
             this.tabPageAdmin.Controls.Add(this.groupBoxCategories);
             this.tabPageAdmin.Controls.Add(this.groupBoxDatabaseTools);
             this.tabPageAdmin.Controls.Add(this.groupBoxBusinesses);
@@ -101,15 +95,15 @@
             this.tabPageAdmin.Text = "Admin";
             this.tabPageAdmin.UseVisualStyleBackColor = true;
             // 
-            // buttonReportsAdmin
+            // buttonSalesAdmin
             // 
-            this.buttonReportsAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReportsAdmin.Location = new System.Drawing.Point(538, 466);
-            this.buttonReportsAdmin.Name = "buttonReportsAdmin";
-            this.buttonReportsAdmin.Size = new System.Drawing.Size(126, 33);
-            this.buttonReportsAdmin.TabIndex = 17;
-            this.buttonReportsAdmin.Text = "Reports";
-            this.buttonReportsAdmin.UseVisualStyleBackColor = true;
+            this.buttonSalesAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalesAdmin.Location = new System.Drawing.Point(538, 466);
+            this.buttonSalesAdmin.Name = "buttonSalesAdmin";
+            this.buttonSalesAdmin.Size = new System.Drawing.Size(126, 33);
+            this.buttonSalesAdmin.TabIndex = 17;
+            this.buttonSalesAdmin.Text = "Sales";
+            this.buttonSalesAdmin.UseVisualStyleBackColor = true;
             // 
             // groupBoxCategories
             // 
@@ -126,23 +120,7 @@
             // 
             // dataGridViewCategories
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCategories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCategories.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewCategories.Location = new System.Drawing.Point(9, 25);
             this.dataGridViewCategories.Name = "dataGridViewCategories";
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -219,23 +197,7 @@
             // 
             // dataGridViewBussinessName
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBussinessName.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewBussinessName.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBussinessName.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewBussinessName.Location = new System.Drawing.Point(9, 25);
             this.dataGridViewBussinessName.Name = "dataGridViewBussinessName";
             this.dataGridViewBussinessName.Size = new System.Drawing.Size(795, 235);
@@ -366,27 +328,11 @@
             // 
             // dataGridViewBusinessProduct
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBusinessProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewBusinessProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewBusinessProduct.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewBusinessProduct.Location = new System.Drawing.Point(9, 101);
             this.dataGridViewBusinessProduct.Name = "dataGridViewBusinessProduct";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewBusinessProduct.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewBusinessProduct.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewBusinessProduct.Size = new System.Drawing.Size(793, 301);
             this.dataGridViewBusinessProduct.TabIndex = 1;
             // 
@@ -469,7 +415,7 @@
         private System.Windows.Forms.GroupBox groupBoxBusinesses;
         private System.Windows.Forms.GroupBox groupBoxCategories;
         private System.Windows.Forms.GroupBox groupBoxDatabaseTools;
-        private System.Windows.Forms.Button buttonReportsAdmin;
+        private System.Windows.Forms.Button buttonSalesAdmin;
         private System.Windows.Forms.Button buttonOrders;
         private System.Windows.Forms.Button buttonShop;
     }

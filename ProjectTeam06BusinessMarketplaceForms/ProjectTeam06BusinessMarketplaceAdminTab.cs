@@ -17,8 +17,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
     {
         private void InitAdminComponents()
         {
-            InitalizeDataGridView(dataGridViewBussinessName, context.Businesses.Local.ToBindingList(), "Orders", "Products");
-            InitalizeDataGridView(dataGridViewCategories, context.Categories.Local.ToBindingList(), "Products");
+            FormUtils.InitalizeDataGridView(dataGridViewBussinessName, context.Businesses.Local.ToBindingList(), false, "Orders", "Products");
+            FormUtils.InitalizeDataGridView(dataGridViewCategories, context.Categories.Local.ToBindingList(), false, "Products");
 
             buttonAddUpdateBusinesses.Click += ButtonAddUpdateBusinessName_Click;
             buttonAddUpdateCategories.Click += ButtonAddUpdateCategories_Click;
@@ -98,6 +98,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
             orders[0].Products.Add(products[5]);
             orders[0].Products.Add(products[10]);
             context.Orders.AddRange(orders);
+            products[5].QuantityInStock--;
+            products[10].QuantityInStock--;
             context.SaveChanges();
 
             //For Business correct load in business tab

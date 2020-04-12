@@ -60,22 +60,5 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Database.Create();
             context.SaveChanges();
         }
-
-        private void InitalizeDataGridView(DataGridView dataGridView, object bindingList, params string[] columnsToIgnore)
-        {
-            dataGridView.DataSource = bindingList;
-            dataGridView.ReadOnly = true;
-            dataGridView.AllowUserToAddRows = false;
-            dataGridView.AllowUserToDeleteRows = false;
-            //dataGridView.RowHeadersVisible = true;
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            // autosize the row heights, but only those displayed to improve performance
-            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-
-            foreach (var columnToIgnore in columnsToIgnore)
-            {
-                dataGridView.Columns[columnToIgnore].Visible = false;
-            }
-        }
     }
 }
