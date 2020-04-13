@@ -82,7 +82,7 @@
             // buttonResetFilters
             // 
             this.buttonResetFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResetFilters.Location = new System.Drawing.Point(159, 50);
+            this.buttonResetFilters.Location = new System.Drawing.Point(159, 46);
             this.buttonResetFilters.Name = "buttonResetFilters";
             this.buttonResetFilters.Size = new System.Drawing.Size(130, 25);
             this.buttonResetFilters.TabIndex = 23;

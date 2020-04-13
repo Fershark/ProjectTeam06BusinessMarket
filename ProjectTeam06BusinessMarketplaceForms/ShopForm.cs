@@ -30,19 +30,63 @@ namespace ProjectTeam06BusinessMarketplaceForms
             buttonAddToOrder.Click += ButtonAddToOrder_Click;
             buttonRemovefromOrder.Click += ButtonRemovefromOrder_Click;
             buttonCheckout.Click += ButtonCheckout_Click;
+
+            ResetControlsToDefault();
+
+            buttonResetFilters.Click += ButtonResetFilters_Click;
+        }
+        
+        private void ButtonResetFilters_Click(object sender, EventArgs e)
+        {
+            ResetControlsToDefault();
         }
 
         private void ShopForm_Load(object sender, EventArgs e)
         {
             context.SaveChanges();
             context.Products.Load();
+            context.Businesses.Load();
+            context.Categories.Load();
             order = new Order { TotalPrice = 0, Business = business };
+
+            comboBoxBusiness.DataSource = context.Businesses.Local.Where(b => b != business).ToArray();
+            comboBoxCategory.DataSource = context.Categories.Local.ToBindingList();
 
             groupBoxShop.Text = $"{business.Name} is shopping";
 
-            var filteredProducts = context.Products.Local.Where(p => p.Business != business && p.QuantityInStock > 0).ToArray();
-            FormUtils.InitalizeDataGridView(dataGridViewOtherProducts, filteredProducts, true, "Id", "BusinessID", "Orders", "CategoryID", "Price", "Category", "Business", "QuantityInStock");
+            ResetControlsToDefault();
             MapOrderToForm();
+        }
+
+        private void ResetControlsToDefault()
+        {
+            RemoveEventsFromFilters();
+
+            comboBoxBusiness.SelectedIndex = -1;
+            textBoxProductName.Text = "";
+            comboBoxCategory.SelectedIndex = -1;
+
+            DisplayProducts();
+
+            AddEventsToFilters();
+        }
+
+        public void DisplayProducts()
+        {
+            var businessFilters = comboBoxBusiness.SelectedItem as Business;
+            var category = comboBoxCategory.SelectedItem as Category;
+            var productName = textBoxProductName.Text.Trim();
+
+            var filteredProducts = context.Products.Local
+                .Where(p => p.Business != business && p.QuantityInStock > 0)
+                .Where(p =>
+                    (businessFilters == null || p.Business == businessFilters)
+                    && (category == null || p.Category == category)
+                    && (productName == "" || p.Name.Contains(productName)))
+                .ToArray();
+            FormUtils.InitalizeDataGridView(dataGridViewOtherProducts, filteredProducts, true, "Id", "BusinessID", "Orders", "CategoryID", "Price", "Category", "Business", "QuantityInStock");
+
+            labelProductsCountData.Text = filteredProducts.Count().ToString();
         }
 
         private void MapOrderToForm()
@@ -58,6 +102,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             FormUtils.InitalizeDataGridView(dataGridViewOrder, productsInOrder, true, "Product");
             labelTotalData.Text = order.TotalPrice.ToString("c");
+            labelProductsInOrderCountData.Text = order.Products.Count().ToString();
         }
 
         private void ButtonAddToOrder_Click(object sender, EventArgs e)
@@ -121,6 +166,36 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.SaveChanges();
             MessageBox.Show("Order checkout successful");
             Close();
+        }
+
+        /// <summary>
+        /// Helper method to remove event handlers from the filters
+        /// </summary>
+        private void RemoveEventsFromFilters()
+        {
+            comboBoxBusiness.SelectedIndexChanged -= FilterChanged;
+            comboBoxCategory.SelectedIndexChanged -= FilterChanged;
+            textBoxProductName.TextChanged -= FilterChanged;
+        }
+
+        /// <summary>
+        /// Helper method to add event handlers to the filters
+        /// </summary>
+        private void AddEventsToFilters()
+        {
+            comboBoxBusiness.SelectedIndexChanged += FilterChanged;
+            comboBoxCategory.SelectedIndexChanged += FilterChanged;
+            textBoxProductName.TextChanged += FilterChanged;
+        }
+
+        /// <summary>
+        /// Event handler for updating the selected transactions based on the filters selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FilterChanged(object sender, EventArgs e)
+        {
+            DisplayProducts();
         }
     }
 }
