@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageAdmin = new System.Windows.Forms.TabPage();
             this.buttonSalesAdmin = new System.Windows.Forms.Button();
@@ -57,6 +57,7 @@
             this.labelInstructions = new System.Windows.Forms.Label();
             this.labelBusinessSelected = new System.Windows.Forms.Label();
             this.comboBoxBusinessSelected = new System.Windows.Forms.ComboBox();
+            this.buttonBusinessSales = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageAdmin.SuspendLayout();
             this.groupBoxCategories.SuspendLayout();
@@ -77,7 +78,7 @@
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(855, 597);
+            this.tabControl.Size = new System.Drawing.Size(855, 605);
             this.tabControl.TabIndex = 0;
             // 
             // tabPageAdmin
@@ -123,8 +124,8 @@
             this.dataGridViewCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCategories.Location = new System.Drawing.Point(9, 25);
             this.dataGridViewCategories.Name = "dataGridViewCategories";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dataGridViewCategories.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dataGridViewCategories.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewCategories.Size = new System.Drawing.Size(330, 145);
             this.dataGridViewCategories.TabIndex = 3;
             // 
@@ -223,7 +224,7 @@
             this.tabPageBusiness.Location = new System.Drawing.Point(4, 29);
             this.tabPageBusiness.Name = "tabPageBusiness";
             this.tabPageBusiness.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBusiness.Size = new System.Drawing.Size(847, 564);
+            this.tabPageBusiness.Size = new System.Drawing.Size(847, 572);
             this.tabPageBusiness.TabIndex = 1;
             this.tabPageBusiness.Text = "Business";
             this.tabPageBusiness.UseVisualStyleBackColor = true;
@@ -231,6 +232,7 @@
             // groupBoxBusinessData
             // 
             this.groupBoxBusinessData.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxBusinessData.Controls.Add(this.buttonBusinessSales);
             this.groupBoxBusinessData.Controls.Add(this.buttonOrders);
             this.groupBoxBusinessData.Controls.Add(this.buttonShop);
             this.groupBoxBusinessData.Controls.Add(this.labelBusinessAddress);
@@ -243,7 +245,7 @@
             this.groupBoxBusinessData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxBusinessData.Location = new System.Drawing.Point(18, 53);
             this.groupBoxBusinessData.Name = "groupBoxBusinessData";
-            this.groupBoxBusinessData.Size = new System.Drawing.Size(810, 496);
+            this.groupBoxBusinessData.Size = new System.Drawing.Size(810, 507);
             this.groupBoxBusinessData.TabIndex = 17;
             this.groupBoxBusinessData.TabStop = false;
             this.groupBoxBusinessData.Text = "BusinessName";
@@ -251,7 +253,7 @@
             // buttonOrders
             // 
             this.buttonOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrders.Location = new System.Drawing.Point(265, 454);
+            this.buttonOrders.Location = new System.Drawing.Point(341, 459);
             this.buttonOrders.Name = "buttonOrders";
             this.buttonOrders.Size = new System.Drawing.Size(130, 31);
             this.buttonOrders.TabIndex = 20;
@@ -261,7 +263,7 @@
             // buttonShop
             // 
             this.buttonShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShop.Location = new System.Drawing.Point(415, 454);
+            this.buttonShop.Location = new System.Drawing.Point(491, 459);
             this.buttonShop.Name = "buttonShop";
             this.buttonShop.Size = new System.Drawing.Size(130, 31);
             this.buttonShop.TabIndex = 19;
@@ -331,8 +333,8 @@
             this.dataGridViewBusinessProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBusinessProduct.Location = new System.Drawing.Point(9, 101);
             this.dataGridViewBusinessProduct.Name = "dataGridViewBusinessProduct";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewBusinessProduct.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewBusinessProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewBusinessProduct.Size = new System.Drawing.Size(793, 301);
             this.dataGridViewBusinessProduct.TabIndex = 1;
             // 
@@ -364,11 +366,21 @@
             this.comboBoxBusinessSelected.Size = new System.Drawing.Size(152, 21);
             this.comboBoxBusinessSelected.TabIndex = 10;
             // 
+            // buttonBusinessSales
+            // 
+            this.buttonBusinessSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBusinessSales.Location = new System.Drawing.Point(197, 458);
+            this.buttonBusinessSales.Name = "buttonBusinessSales";
+            this.buttonBusinessSales.Size = new System.Drawing.Size(126, 33);
+            this.buttonBusinessSales.TabIndex = 21;
+            this.buttonBusinessSales.Text = "Sales";
+            this.buttonBusinessSales.UseVisualStyleBackColor = true;
+            // 
             // ProjectTeam06BusinessMarketplaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 616);
+            this.ClientSize = new System.Drawing.Size(875, 629);
             this.Controls.Add(this.tabControl);
             this.Name = "ProjectTeam06BusinessMarketplaceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -418,6 +430,7 @@
         private System.Windows.Forms.Button buttonSalesAdmin;
         private System.Windows.Forms.Button buttonOrders;
         private System.Windows.Forms.Button buttonShop;
+        private System.Windows.Forms.Button buttonBusinessSales;
     }
 }
 

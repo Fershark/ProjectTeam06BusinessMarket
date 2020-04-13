@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxOrders = new System.Windows.Forms.GroupBox();
+            this.groupBoxSales = new System.Windows.Forms.GroupBox();
             this.buttonResetFilters = new System.Windows.Forms.Button();
             this.labelCategory = new System.Windows.Forms.Label();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
@@ -46,38 +46,38 @@
             this.dataGridViewBuyers = new System.Windows.Forms.DataGridView();
             this.labelProducts = new System.Windows.Forms.Label();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
-            this.groupBoxOrders.SuspendLayout();
+            this.groupBoxSales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBuyers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBoxOrders
+            // groupBoxSales
             // 
-            this.groupBoxOrders.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBoxOrders.Controls.Add(this.buttonResetFilters);
-            this.groupBoxOrders.Controls.Add(this.labelCategory);
-            this.groupBoxOrders.Controls.Add(this.comboBoxCategory);
-            this.groupBoxOrders.Controls.Add(this.textBoxProductName);
-            this.groupBoxOrders.Controls.Add(this.labelProductName);
-            this.groupBoxOrders.Controls.Add(this.labelBusiness);
-            this.groupBoxOrders.Controls.Add(this.comboBoxBusiness);
-            this.groupBoxOrders.Controls.Add(this.labelFilters);
-            this.groupBoxOrders.Controls.Add(this.labelInstructions);
-            this.groupBoxOrders.Controls.Add(this.labelBuyerssCountData);
-            this.groupBoxOrders.Controls.Add(this.labelBuyersCount);
-            this.groupBoxOrders.Controls.Add(this.labelProductsCountData);
-            this.groupBoxOrders.Controls.Add(this.labelProductsCount);
-            this.groupBoxOrders.Controls.Add(this.labelBuyers);
-            this.groupBoxOrders.Controls.Add(this.dataGridViewBuyers);
-            this.groupBoxOrders.Controls.Add(this.labelProducts);
-            this.groupBoxOrders.Controls.Add(this.dataGridViewProducts);
-            this.groupBoxOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxOrders.Location = new System.Drawing.Point(12, 12);
-            this.groupBoxOrders.Name = "groupBoxOrders";
-            this.groupBoxOrders.Size = new System.Drawing.Size(828, 629);
-            this.groupBoxOrders.TabIndex = 21;
-            this.groupBoxOrders.TabStop = false;
-            this.groupBoxOrders.Text = "Sales";
+            this.groupBoxSales.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxSales.Controls.Add(this.buttonResetFilters);
+            this.groupBoxSales.Controls.Add(this.labelCategory);
+            this.groupBoxSales.Controls.Add(this.comboBoxCategory);
+            this.groupBoxSales.Controls.Add(this.textBoxProductName);
+            this.groupBoxSales.Controls.Add(this.labelProductName);
+            this.groupBoxSales.Controls.Add(this.labelBusiness);
+            this.groupBoxSales.Controls.Add(this.comboBoxBusiness);
+            this.groupBoxSales.Controls.Add(this.labelFilters);
+            this.groupBoxSales.Controls.Add(this.labelInstructions);
+            this.groupBoxSales.Controls.Add(this.labelBuyerssCountData);
+            this.groupBoxSales.Controls.Add(this.labelBuyersCount);
+            this.groupBoxSales.Controls.Add(this.labelProductsCountData);
+            this.groupBoxSales.Controls.Add(this.labelProductsCount);
+            this.groupBoxSales.Controls.Add(this.labelBuyers);
+            this.groupBoxSales.Controls.Add(this.dataGridViewBuyers);
+            this.groupBoxSales.Controls.Add(this.labelProducts);
+            this.groupBoxSales.Controls.Add(this.dataGridViewProducts);
+            this.groupBoxSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxSales.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxSales.Name = "groupBoxSales";
+            this.groupBoxSales.Size = new System.Drawing.Size(828, 629);
+            this.groupBoxSales.TabIndex = 21;
+            this.groupBoxSales.TabStop = false;
+            this.groupBoxSales.Text = "Sales";
             // 
             // buttonResetFilters
             // 
@@ -246,12 +246,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 650);
-            this.Controls.Add(this.groupBoxOrders);
+            this.Controls.Add(this.groupBoxSales);
             this.Name = "SalesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales";
-            this.groupBoxOrders.ResumeLayout(false);
-            this.groupBoxOrders.PerformLayout();
+            this.groupBoxSales.ResumeLayout(false);
+            this.groupBoxSales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBuyers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.ResumeLayout(false);
@@ -260,7 +260,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxOrders;
+        private System.Windows.Forms.GroupBox groupBoxSales;
         private System.Windows.Forms.Label labelInstructions;
         private System.Windows.Forms.Label labelBuyerssCountData;
         private System.Windows.Forms.Label labelBuyersCount;

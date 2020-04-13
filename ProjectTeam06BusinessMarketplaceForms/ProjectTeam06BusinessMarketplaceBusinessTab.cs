@@ -24,6 +24,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
             buttonAddUpdateProduct.Click += ButtonAddUpdateProduct_Click;
             buttonShop.Click += ButtonShop_Click;
             buttonOrders.Click += ButtonOrders_Click;
+            buttonBusinessSales.Click += ButtonBusinessSales_Click;
             comboBoxBusinessSelected.SelectedIndexChanged += ComboBoxBusinessSelected_SelectedIndexChanged;
             //Select the first business in the Database to simulate that business is the one signed in
             //The index is changed twice to trigger the event
@@ -65,6 +66,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
             Orders ordersForm = new Orders(context, businessSigned);
             ordersForm.ShowDialog();
+        }
+
+        private void ButtonBusinessSales_Click(object sender, EventArgs e)
+        {
+            SalesForm salesForm = new SalesForm(context, businessSigned);
+            salesForm.ShowDialog();
         }
 
         private void ComboBoxBusinessSelected_SelectedIndexChanged(object sender, EventArgs e)

@@ -15,12 +15,14 @@ namespace ProjectTeam06BusinessMarketplaceForms
     public partial class SalesForm : Form
     {
         private BusinessMarketplaceEntitiesContext context;
+        private Business business;
 
-        public SalesForm(BusinessMarketplaceEntitiesContext context)
+        public SalesForm(BusinessMarketplaceEntitiesContext context, Business business = null)
         {
             InitializeComponent();
 
             this.context = context;
+            this.business = business;
 
             Load += SalesForm_Load;
         }
@@ -33,7 +35,20 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Products.Load();
             context.Orders.Load();
 
-            comboBoxBusiness.DataSource = context.Businesses.Local.ToBindingList();
+
+            if (business != null)
+            {
+                groupBoxSales.Text = $"{business.Name} Sales";
+                List<Business> businesses = new List<Business>();
+                businesses.Add(business);
+                comboBoxBusiness.DataSource = businesses;
+                comboBoxBusiness.SelectedIndex = 0;
+            } 
+            else 
+            {
+                comboBoxBusiness.DataSource = context.Businesses.Local.ToBindingList();
+            } 
+            
             comboBoxCategory.DataSource = context.Categories.Local.ToBindingList();
 
             ResetControlsToDefault();
@@ -51,7 +66,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
         {
             RemoveEventsFromFilters();
 
-            comboBoxBusiness.SelectedIndex = -1;
+            comboBoxBusiness.SelectedIndex = business == null ? -1 : 0;
             textBoxProductName.Text = "";
             comboBoxCategory.SelectedIndex = -1;
 
@@ -62,13 +77,13 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         public void DisplayProducts()
         {
-            var business = comboBoxBusiness.SelectedItem as Business;
+            var businessFilters = comboBoxBusiness.SelectedItem as Business;
             var category = comboBoxCategory.SelectedItem as Category;
             var productName = textBoxProductName.Text.Trim();
 
             var productsSold = context.Products.Local
                 .Where(p => 
-                    (business == null || p.Business == business) 
+                    (businessFilters == null || p.Business == businessFilters) 
                     && (category == null || p.Category == category) 
                     && (productName == "" || p.Name.Contains(productName)))
                 .Select(p => new ProductSales
