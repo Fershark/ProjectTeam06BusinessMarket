@@ -14,6 +14,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class SalesForm : Form
     {
+        //Context shared through all forms
         private BusinessMarketplaceEntitiesContext context;
         private Business business;
 
@@ -35,20 +36,22 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Products.Load();
             context.Orders.Load();
 
-
+            //If the business is null it means the admin wants to see all the sales of 
+            //all business
             if (business != null)
             {
+                //here the business can see only its own sales
                 groupBoxSales.Text = $"{business.Name} Sales";
                 List<Business> businesses = new List<Business>();
                 businesses.Add(business);
                 comboBoxBusiness.DataSource = businesses;
                 comboBoxBusiness.SelectedIndex = 0;
-            } 
-            else 
+            }
+            else
             {
                 comboBoxBusiness.DataSource = context.Businesses.Local.ToBindingList();
-            } 
-            
+            }
+
             comboBoxCategory.DataSource = context.Categories.Local.ToBindingList();
 
             ResetControlsToDefault();
@@ -57,6 +60,11 @@ namespace ProjectTeam06BusinessMarketplaceForms
             dataGridViewProducts.SelectionChanged += DataGridViewProducts_SelectionChanged;
         }
 
+        /// <summary>
+        /// Reset the controls to its defaults
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonResetFilters_Click(object sender, EventArgs e)
         {
             ResetControlsToDefault();
@@ -64,6 +72,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         private void ResetControlsToDefault()
         {
+            //We remove the events to prevent updates while we clean the data
             RemoveEventsFromFilters();
 
             comboBoxBusiness.SelectedIndex = business == null ? -1 : 0;
@@ -75,6 +84,10 @@ namespace ProjectTeam06BusinessMarketplaceForms
             AddEventsToFilters();
         }
 
+        /// <summary>
+        /// Display the products and filter it using compound logic
+        /// We used a subquery in the select to count the number of times a product is sold
+        /// </summary>
         public void DisplayProducts()
         {
             var businessFilters = comboBoxBusiness.SelectedItem as Business;
@@ -82,9 +95,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             var productName = textBoxProductName.Text.Trim();
 
             var productsSold = context.Products.Local
-                .Where(p => 
-                    (businessFilters == null || p.Business == businessFilters) 
-                    && (category == null || p.Category == category) 
+                .Where(p =>
+                    (businessFilters == null || p.Business == businessFilters)
+                    && (category == null || p.Category == category)
                     && (productName == "" || p.Name.Contains(productName)))
                 .Select(p => new ProductSales
                 {
@@ -101,6 +114,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             ResetBuyers();
         }
 
+        /// <summary>
+        /// Reset the buyers data grid and count
+        /// </summary>
         private void ResetBuyers()
         {
             dataGridViewBuyers.DataSource = null;
@@ -128,7 +144,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
         }
 
         /// <summary>
-        /// Event handler for updating the selected transactions based on the filters selected
+        /// Event handler for updating the data based on the filters selected
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -137,6 +153,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
             DisplayProducts();
         }
 
+        /// <summary>
+        /// Display the buyers of a product.
+        /// It also group the buyers and display the count
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DataGridViewProducts_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridViewProducts.SelectedRows.Count > 0)
@@ -187,6 +209,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             public Product Product { get; set; }
         }
 
+        /// <summary>
+        /// Private class to format the buyer information and displayed it in the data grid view
+        /// </summary>
         private class Buyer
         {
             [DisplayName("Purchase Date")]

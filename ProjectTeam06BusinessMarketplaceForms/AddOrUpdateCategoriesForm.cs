@@ -15,6 +15,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class AddOrUpdateCategoriesForm : Form
     {
+        //Context shared by all forms
         private BusinessMarketplaceEntitiesContext context;
         private Category category;
 

@@ -11,7 +11,7 @@ namespace DataTableAccessLayer
     public class BusinessMarketplaceDataAccessLayer : SqlDataTableAccessLayer
     {
         /// <summary>
-        /// static method for initializing the data set and adding the tables
+        /// static method for initializing the data set and adding the tables from this project
         /// </summary>
         /// <returns>DataSet</returns>
         public DataSet InitDataSet()
@@ -56,8 +56,8 @@ namespace DataTableAccessLayer
 		/// include a schema, and should have been written using
 		/// <see cref="BackupDataSetToXML(DataSet, string)"/>
 		/// 
-		/// File is named using the 
-		/// <see cref="DataSet.DataSetName"/> with .xml appended
+		/// File is named using a
+		/// timestamp with .xml appended
 		/// 
 		/// DataSet tables must not be associated with views.
         /// 

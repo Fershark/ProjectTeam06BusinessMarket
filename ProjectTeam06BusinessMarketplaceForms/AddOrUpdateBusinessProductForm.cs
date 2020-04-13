@@ -16,6 +16,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class AddOrUpdateBusinessProductForm : Form
     {
+        //Context shared by all forms
         private BusinessMarketplaceEntitiesContext context;
         private Product product;
         private Business business;
@@ -36,7 +37,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         /// <summary>
         /// Select index of listbox callback.
-        /// If the value selected is of business name it maps its values to the form
+        /// If the value selected is of type product, it maps its values to the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -49,11 +50,22 @@ namespace ProjectTeam06BusinessMarketplaceForms
             }
         }
 
+        /// <summary>
+        /// Clean the form when the add button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddProduct_Click(object sender, EventArgs e)
         {
             CleanForm();
         }
 
+        /// <summary>
+        /// When this form load; load the data to the list box and clean the form.
+        /// It also loads all categories and display the current business adding products
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddOrUpdateBusinessProductForm_Load(object sender, EventArgs e)
         {
             labelBusinessNameData.Text = business.Name;
@@ -63,6 +75,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             CleanForm();
         }
 
+        /// <summary>
+        /// Load the data to the list box
+        /// </summary>
         private void ReloadListBoxData()
         {
             context.SaveChanges();
@@ -74,6 +89,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             listBoxProduct.DataSource = context.Products.Local.Where(p => p.Business == business).ToArray();
         }
 
+        /// <summary>
+        /// Clean the form by clearing the selection from the list box and creating a new object and map it to the form
+        /// </summary>
         private void CleanForm()
         {
             listBoxProduct.SelectedIndex = -1;
@@ -82,6 +100,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             MapProductToForm();
         }
 
+        /// <summary>
+        /// Map the object to the form fields
+        /// </summary>
         private void MapProductToForm()
         {
             labelProductIdNumber.Text = product.Id.ToString();
@@ -96,6 +117,11 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 comboBoxCategory.SelectedItem = product.Category;
         }
 
+        /// <summary>
+        /// Method to validate the data and add it or update it in the context
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonUpdateProduct_Click(object sender, EventArgs e)
         {
             string name = textBoxProductName.Text;

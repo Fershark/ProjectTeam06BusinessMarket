@@ -13,8 +13,14 @@ using System.Windows.Forms;
 
 namespace ProjectTeam06BusinessMarketplaceForms
 {
+    /// <summary>
+    /// Partial class to keep all the functionality of the admin in one file
+    /// </summary>
     public partial class ProjectTeam06BusinessMarketplaceForm
     {
+        /// <summary>
+        /// Method to init the components in the admin tab
+        /// </summary>
         private void InitAdminComponents()
         {
             FormUtils.InitalizeDataGridView(dataGridViewBussinessName, context.Businesses.Local.ToBindingList(), false, "Orders", "Products");
@@ -27,17 +33,27 @@ namespace ProjectTeam06BusinessMarketplaceForms
             buttonBackupDatabase.Click += ButtonBackupDatabase_Click;
             buttonRestoreDatabase.Click += ButtonRestoreDatabase_Click;
         }
-       
+
+        /// <summary>
+        /// Method to open the form for updating or adding a business
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddUpdateBusinessName_Click(object sender, EventArgs e)
         {
             AddOrUpdateBusinessNameForm addOrUpdateBusinessNameForm = new AddOrUpdateBusinessNameForm(context);
             addOrUpdateBusinessNameForm.ShowDialog();
             dataGridViewBussinessName.Refresh();
-            
+
             //For Business correct load in business tab
             SetBusinessComboBox();
         }
 
+        /// <summary>
+        /// Method to open the form for updating or adding a category
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddUpdateCategories_Click(object sender, EventArgs e)
         {
             AddOrUpdateCategoriesForm addOrUpdateDepartmentForm = new AddOrUpdateCategoriesForm(context);
@@ -45,12 +61,22 @@ namespace ProjectTeam06BusinessMarketplaceForms
             dataGridViewCategories.Refresh();
         }
 
+        /// <summary>
+        /// Method to open the form to see the sales of all business' products
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonSalesAdmin_Click(object sender, EventArgs e)
         {
             SalesForm salesForm = new SalesForm(context);
             salesForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Seed data to initialize the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonDeleteAndSeedDatabase_Click(object sender, EventArgs e)
         {
             CleanDatabaseAndEntities();
@@ -118,6 +144,15 @@ namespace ProjectTeam06BusinessMarketplaceForms
             MessageBox.Show("Database seeded correctly.");
         }
 
+        /// <summary>
+        /// Method to backup the database.
+        /// It opens a save file dialog to choose where to save the backup,
+        /// it also suggest to use a timestamp with the database name to save the backup.
+        /// The timestamp uses dashes for the time, since using colons in the name of a file
+        /// is forbidden.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonBackupDatabase_Click(object sender, EventArgs e)
         {
             // opening the save file dialog
@@ -160,6 +195,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
             }
         }
 
+        /// <summary>
+        /// Method to restore the database.
+        /// It opens a open file dialog to choose from where to load the backup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonRestoreDatabase_Click(object sender, EventArgs e)
         {
             // opening the file dialog

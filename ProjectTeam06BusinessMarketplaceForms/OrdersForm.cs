@@ -14,6 +14,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 {
     public partial class Orders : Form
     {
+        //Context shared through all forms
         private BusinessMarketplaceEntitiesContext context;
         private Business business;
 
@@ -27,6 +28,11 @@ namespace ProjectTeam06BusinessMarketplaceForms
             Load += OrdersForm_Load;
         }
 
+        /// <summary>
+        /// Display the business' orders
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrdersForm_Load(object sender, EventArgs e)
         {
             context.SaveChanges();
@@ -42,6 +48,11 @@ namespace ProjectTeam06BusinessMarketplaceForms
             dataGridViewOrders.SelectionChanged += DataGridViewOrders_SelectionChanged;
         }
 
+        /// <summary>
+        /// If a row is selected, it displays the products from that order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DataGridViewOrders_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridViewOrders.SelectedRows.Count > 0)
@@ -50,6 +61,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 if (order != null)
                 {
                     List<Product> products = order.Products.ToList();
+                    //Here we use the class from the entities that is not in the database to display the order details
                     List<ProductInOrder> productsInOrder = new List<ProductInOrder>();
                     foreach (var product in products)
                     {
@@ -62,6 +74,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
                 }
             }
 
+            //If the selection is not of type order we clean the datagrid and the counter
             dataGridViewOrderProducts.DataSource = null;
             labelProductsCountData.Text = "0";
         }

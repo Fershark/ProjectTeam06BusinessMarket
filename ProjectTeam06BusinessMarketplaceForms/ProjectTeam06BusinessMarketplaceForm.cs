@@ -31,6 +31,12 @@ namespace ProjectTeam06BusinessMarketplaceForms
             this.FormClosed += (s, e) => context.Dispose();
         }
 
+        /// <summary>
+        /// Method to init the main form.
+        /// It init each tab and load the entities.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProjectTeam06BusinessMarketplaceForm_Load(object sender, EventArgs e)
         {
             LoadEntities();
@@ -39,6 +45,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             InitBusinessComponents();
         }
 
+        /// <summary>
+        /// Helper method to load all the entities
+        /// </summary>
         private void LoadEntities()
         {
             context.Businesses.Load();
@@ -47,6 +56,9 @@ namespace ProjectTeam06BusinessMarketplaceForms
             context.Categories.Load();
         }
 
+        /// <summary>
+        /// Helper method to clear local and remove and create the database again
+        /// </summary>
         private void CleanDatabaseAndEntities()
         {
             //Clear all the records to prevent exceptions

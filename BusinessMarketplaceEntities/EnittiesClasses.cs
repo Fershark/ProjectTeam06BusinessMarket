@@ -108,7 +108,7 @@ namespace BusinessMarketplaceEntitiesNS
             }
         }
 
-        //Used to display only the category name
+        //Used to display only the category name only
         [NotMapped]
         [DisplayName("Category")]
         public string CategoryName
@@ -121,7 +121,7 @@ namespace BusinessMarketplaceEntitiesNS
             }
         }
 
-        //Used to display only the business name
+        //Used to display only the business name only
         [NotMapped]
         [DisplayName("Business")]
         public string BusinessName
@@ -226,7 +226,7 @@ namespace BusinessMarketplaceEntitiesNS
     }
 
     /// <summary>
-    /// Class to display the product in the order or in the order details
+    /// Temporary class used to display the product in the current and past orders
     /// </summary>
     public class ProductInOrder
     {
