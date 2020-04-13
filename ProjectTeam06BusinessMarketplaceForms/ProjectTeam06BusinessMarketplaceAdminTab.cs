@@ -146,6 +146,7 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         /// <summary>
         /// Method to backup the database.
+        /// We use the ADO connection to backup and restore the database.
         /// It opens a save file dialog to choose where to save the backup,
         /// it also suggest to use a timestamp with the database name to save the backup.
         /// The timestamp uses dashes for the time, since using colons in the name of a file
@@ -197,7 +198,8 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
         /// <summary>
         /// Method to restore the database.
-        /// It opens a open file dialog to choose from where to load the backup
+        /// It opens a open file dialog to choose from where to load the backup.
+        /// We use the ADO connection to backup and restore the database.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
