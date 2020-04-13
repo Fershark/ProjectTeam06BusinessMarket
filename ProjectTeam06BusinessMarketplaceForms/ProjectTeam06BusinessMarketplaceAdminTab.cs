@@ -100,13 +100,16 @@ namespace ProjectTeam06BusinessMarketplaceForms
 
             List<Order> orders = new List<Order>()
             {
-                new Order {OrderDate = DateTime.Now, TotalPrice = 75000, Business = businessesDictionary["KRONES Machinery Co. Limited"]}
+                new Order {OrderDate = DateTime.Now, TotalPrice = 75000, Business = businessesDictionary["KRONES Machinery Co. Limited"]},
+                new Order {OrderDate = DateTime.Now.AddDays(-1), TotalPrice = 75000, Business = businessesDictionary["KRONES Machinery Co. Limited"]}
             };
             orders[0].Products.Add(products[5]);
             orders[0].Products.Add(products[10]);
+            orders[1].Products.Add(products[5]);
+            orders[1].Products.Add(products[10]);
             context.Orders.AddRange(orders);
-            products[5].QuantityInStock--;
-            products[10].QuantityInStock--;
+            products[5].QuantityInStock -= 2;
+            products[10].QuantityInStock -= 2;
             context.SaveChanges();
 
             //For Business correct load in business tab
